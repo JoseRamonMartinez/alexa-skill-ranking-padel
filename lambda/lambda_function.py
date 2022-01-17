@@ -18,23 +18,24 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
+#This Handler is called when the skill is invoked by using only the invocation name(Ex. Alexa, abre ranking de padel)
 class LaunchRequestHandler(AbstractRequestHandler):
-    """Handler for Skill Launch."""
+    
     def can_handle(self, handler_input):
-        # type: (HandlerInput) -> bool
-
-        return ask_utils.is_request_type("LaunchRequest")(handler_input)
-
+        return is_request_type("LaunchRequest")(handler_input)
+    
     def handle(self, handler_input):
-        # type: (HandlerInput) -> Response
-        speak_output = "Welcome, you can say Hello or Help. Which would you like to try?"
-
+        language_prompts = handler_input.attributes_manager.request_attributes["_"]
+        skill_name = language_prompts["SKILL_NAME"]
+        speech_output = random.choice(language_prompts["WELCOME"]).format(skill_name)
+        reprompt = random.choice(language_prompts["ASK"])
         return (
             handler_input.response_builder
-                .speak(speak_output)
-                .ask(speak_output)
+                .speak(speech_output+reprompt)
+                .ask(reprompt)
+                .set_card(SimpleCard(skill_name,speech_output))
                 .response
-        )
+            )
 
 
 class HelloWorldIntentHandler(AbstractRequestHandler):
