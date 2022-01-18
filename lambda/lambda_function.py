@@ -61,7 +61,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
 
 class PlayTrendsCountryHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
-        return is_intent_name("PlayTrendsCountry")(handler_input)
+        return is_intent_name("PlayRanking")(handler_input)
     
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
