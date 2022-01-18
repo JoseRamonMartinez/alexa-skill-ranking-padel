@@ -9,4 +9,4 @@ def lambda_handler(event, context):
     invoke_response = lambda_client.invoke(FunctionName="get_player_by_name",
                                            InvocationType='Event',
                                            Payload=json.dumps(msg))
-    print(invoke_response)
+    return invoke_response
