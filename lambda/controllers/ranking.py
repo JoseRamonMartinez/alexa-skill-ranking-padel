@@ -4,7 +4,7 @@ import json
 
 lambda_client = boto3_client('lambda')
 
-def lambda_handler(event, context):
+def ranking():
     msg = {}
     invoke_response = lambda_client.invoke(FunctionName="get_ranking",
                                            InvocationType='Event',
