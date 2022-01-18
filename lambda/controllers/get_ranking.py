@@ -8,4 +8,4 @@ def get_ranking():
     invoke_response = lambda_client.invoke(FunctionName="get_ranking",
                                            InvocationType='Event',
                                            Payload=json.dumps({}))
-    print(invoke_response)
+   return invoke_response
