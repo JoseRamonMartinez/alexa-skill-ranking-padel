@@ -255,7 +255,6 @@ class RepeatInterceptor(AbstractResponseInterceptor):
 # exception handlers and interceptors to it.
 
 sb = CustomSkillBuilder (persistence_adapter = s3_adapter)
-sb.add_request_handler(InvalidConfigHandler())
 sb.add_request_handler(LaunchRequestHandler())
 sb.add_request_handler(PlayRankingHandler())
 sb.add_request_handler(PlayPlayerByPositionHandler())
