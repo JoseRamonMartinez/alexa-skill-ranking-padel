@@ -12,7 +12,7 @@ import os
 
 from controllers.player_by_name import trends
 from controllers.player_by_position import popular_topic_tweets
-from controllers.trends import trends
+from controllers.ranking import trends
 
 s3_adapter = S3Adapter(bucket_name = os.environ.get("S3_PERSISTENCE_BUCKET"))
 
