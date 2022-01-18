@@ -10,9 +10,9 @@ import json
 import random
 import os
 
-from controllers.player_by_name import trends
-from controllers.player_by_position import popular_topic_tweets
-from controllers.ranking import trends
+from controllers.player_by_name import player_by_name
+from controllers.player_by_position import player_by_position
+from controllers.ranking import ranking
 
 s3_adapter = S3Adapter(bucket_name = os.environ.get("S3_PERSISTENCE_BUCKET"))
 
