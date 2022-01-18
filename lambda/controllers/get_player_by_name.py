@@ -1,8 +1,7 @@
-from boto3 import client as boto3_client
-from datetime import datetime
+import boto3
 import json
 
-lambda_client = boto3_client('lambda')
+lambda_client = boto3.client('lambda')
 
 def get_player_by_name(data):
     msg = {"name":data["name"]}
