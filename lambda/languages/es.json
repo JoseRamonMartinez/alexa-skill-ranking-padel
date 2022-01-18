@@ -16,8 +16,12 @@
       "El",
       "Los"
     ],
+    "ARE_TOP_PLAYER": [
+      "es",
+      "son"
+    ],
     "TOP_PLAYER": [
-      " top {} del mundo es "
+      " top {} del mundo "
     ],
     "TOPIC_TWEETS": [
       "Los twits más relevantes sobre {} son: "
