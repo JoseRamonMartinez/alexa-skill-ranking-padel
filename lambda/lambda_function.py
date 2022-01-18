@@ -66,8 +66,8 @@ class PlayRankingHandler(AbstractRequestHandler):
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
-        country = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
-        ranking_list=trends(country)
+        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
+        ranking_list=get_ranking()
         
         speech_output = random.choice(language_prompts["COUNTRY_TRENDS"]).format(country)+'\r\n'
         for i in range(0,10):
