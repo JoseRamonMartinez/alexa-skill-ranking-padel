@@ -69,7 +69,7 @@ class PlayRankingHandler(AbstractRequestHandler):
         number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
         ranking_list=get_ranking()
         
-        speech_output = random.choice(language_prompts["COUNTRY_TRENDS"]).format(country)+'\r\n'
+        speech_output = random.choice(language_prompts["TOP_RANKING"]).format(number)+'\r\n'
         for i in range(0,10):
             speech_output+=f'{i+1}, {trends_list[i]}. \r\n'
         reprompt = random.choice(language_prompts["ASK_MORE"])
