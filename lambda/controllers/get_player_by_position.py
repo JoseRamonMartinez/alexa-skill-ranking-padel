@@ -9,4 +9,4 @@ def player_by_position(data):
     invoke_response = lambda_client.invoke(FunctionName="get_player_by_position",
                                            InvocationType='Event',
                                            Payload=json.dumps(msg))
-    print(invoke_response)
+    return invoke_response
