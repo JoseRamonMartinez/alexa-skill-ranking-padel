@@ -9,7 +9,10 @@
     "ASK_MORE": [
       " ¿Con qué más puedo ayudarte?"
     ],
-    "RANKING": [
+    "TOP_RANKING": [
+      "Los {} mejores del mundo son: "
+    ],
+    "TOP_PLAYER": [
       "El top {} del mundo es: "
     ],
     "TOPIC_TWEETS": [
