@@ -86,22 +86,23 @@ class PlayRankingHandler(AbstractRequestHandler):
             )
 
 
-class PlayPopularTopicTweetsHandler(AbstractRequestHandler):
+class PlayPlayerByPositionHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
-        return is_intent_name("PlayPopularTopicTweets")(handler_input)
+        return is_intent_name("PlayPlayerByPosition")(handler_input)
     
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
-        topic = handler_input.request_envelope.request.intent.slots["topic"].slot_value.value
+        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
+        ranking_list=get_ranking()
         
-        language_request= str(handler_input.request_envelope.request.locale[:2])
-
-        topic_tweets=popular_topic_tweets(topic, language_request).copy()
-        speech_output = random.choice(language_prompts["TOPIC_TWEETS"]).format(topic)+'\r\n'
-        for i in topic_tweets: 
-            speech_output+= f'{i} {random.choice(language_prompts["SAY"])}; {topic_tweets[i]}. \r\n'
+        speech_output = random.choice(language_prompts["TOP_RANKING"]).format(number)+'\r\n'
+        sorted_ranking_list = sorted(ranking_list, key=lambda k: k['position'], reverse=False)[0:number]
+        for player in sorted_ranking_list:
+            player_name = player.replace("-", " ").title()
+            speech_output+=f'{player_name} \r\n'
         reprompt = random.choice(language_prompts["ASK_MORE"])
+        
         return(
             handler_input.response_builder
                 .speak(speech_output+reprompt)
