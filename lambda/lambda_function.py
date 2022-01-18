@@ -72,8 +72,8 @@ class PlayRankingHandler(AbstractRequestHandler):
         
         speech_output = random.choice(language_prompts["TOP_RANKING"]).format(number)+'\r\n'
         sorted_ranking_list = sorted(ranking_list, key=lambda k: k['position'], reverse=False)[0:number]
-        for i in sorted_ranking_list:
-            speech_output+=f'{i+1}, {trends_list[i]}. \r\n'
+        for player in sorted_ranking_list:
+            speech_output+=f'El número {player} es {trends_list[i]}. \r\n'
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
         return(
