@@ -33,7 +33,7 @@ class InvalidConfigHandler(AbstractRequestHandler):
         
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
-        speech_output = language_prompts["ENV_NOT_CONFIGURED"]
+        #speech_output = language_prompts["ENV_NOT_CONFIGURED"]
         return ( 
             handler_input.response_builder
                 .speak(speech_output)
