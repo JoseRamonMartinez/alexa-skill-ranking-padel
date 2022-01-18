@@ -4,7 +4,7 @@ import json
 
 lambda_client = boto3_client('lambda')
 
-def lambda_handler(event, context):
+def player_by_position(event, context):
     msg = {"position":"1"}
     invoke_response = lambda_client.invoke(FunctionName="get_player_by_position",
                                            InvocationType='Event',
