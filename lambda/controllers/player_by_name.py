@@ -5,7 +5,7 @@ import json
 lambda_client = boto3_client('lambda')
 
 def lambda_handler(event, context):
-    msg = {"key":"new_invocation", "at": datetime.now()}
+    msg = {"name":"juan-lebron"}
     invoke_response = lambda_client.invoke(FunctionName="get_player_by_name",
                                            InvocationType='Event',
                                            Payload=json.dumps(msg))
