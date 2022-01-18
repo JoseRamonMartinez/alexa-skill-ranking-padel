@@ -45,16 +45,18 @@ class PlayRankingHandler(AbstractRequestHandler):
         return is_intent_name("PlayRanking")(handler_input)
     
     def handle(self,handler_input):
-        language_prompts = handler_input.attributes_manager.request_attributes["_"]
-        skill_name = language_prompts["SKILL_NAME"]
-        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
-        ranking_list=get_ranking()
+        #language_prompts = handler_input.attributes_manager.request_attributes["_"]
+        #skill_name = language_prompts["SKILL_NAME"]
+        #number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
+        #ranking_list=get_ranking()
         
-        speech_output = random.choice(language_prompts["TOP_RANKING"]).format(number)+'\r\n'
-        sorted_ranking_list = sorted(ranking_list, key=lambda k: k['position'], reverse=False)[0:number]
-        for player in sorted_ranking_list:
-            player_name = player["name"].replace("-", " ").title()
-            speech_output+=f'{player_name} \r\n'
+        #speech_output = random.choice(language_prompts["TOP_RANKING"]).format(number)+'\r\n'
+        #sorted_ranking_list = sorted(ranking_list, key=lambda k: k['position'], reverse=False)[0:number]
+        #for player in sorted_ranking_list:
+        #    player_name = player["name"].replace("-", " ").title()
+        #    speech_output+=f'{player_name} \r\n'
+        
+        speech_output = random.choice(language_prompts["ASK_MORE"])
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
         return(
