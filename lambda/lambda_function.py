@@ -94,7 +94,7 @@ class PlayPlayerByPositionHandler(AbstractRequestHandler):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
         number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
-        ranking_list=ranking_list=get_player_by_position(number)
+        ranking_list = ranking_list=get_player_by_position(number)
         
         speech_output = random.choice(language_prompts["TOP_PLAYER"]).format(number)+'\r\n'
         for player in sorted_ranking_list:
