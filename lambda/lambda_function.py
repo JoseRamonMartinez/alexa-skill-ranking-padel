@@ -96,8 +96,8 @@ class PlayPlayerByPositionHandler(AbstractRequestHandler):
         number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
         player_list = ranking_list=get_player_by_position(number)
         
-        speech_output = language_prompts["ARTICLE_TOP_PLAYER"] if "pathParameters" in event else None
-        speech_output = random.choice(language_prompts["TOP_PLAYER"]).format(number)
+        speech_output = language_prompts["ARTICLE_TOP_PLAYER"][1].format(number) if len(player_list) > 1 else language_prompts["ARTICLE_TOP_PLAYER"][0].format(number)
+
         for player in player_list[1:len(player_list)]:
             speech_output+=f'{player_name} \r\n'
         reprompt = random.choice(language_prompts["ASK_MORE"])
