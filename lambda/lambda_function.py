@@ -21,25 +21,6 @@ s3_adapter = S3Adapter(bucket_name = os.environ.get("S3_PERSISTENCE_BUCKET"))
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-# Intent Handlers
-
-# This handler responds when required environment variables are missing
-class InvalidConfigHandler(AbstractRequestHandler):
-    
-    def can_handle(self, handler_input):
-        request_attributes = handler_input.attributes_manager.request_attributes
-        invalid_config = request_attributes["invalid_config"]
-        return invalid_config
-        
-    def handle(self,handler_input):
-        language_prompts = handler_input.attributes_manager.request_attributes["_"]
-        #speech_output = language_prompts["ENV_NOT_CONFIGURED"]
-        return ( 
-            handler_input.response_builder
-                .speak(speech_output)
-                .response 
-            )
-
 #This Handler is called when the skill is invoked by using only the invocation name(Ex. Alexa, open tendencias de twitter)
 class LaunchRequestHandler(AbstractRequestHandler):
     
