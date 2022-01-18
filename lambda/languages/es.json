@@ -12,10 +12,8 @@
     "TOP_RANKING": [
       "Los {} mejores del mundo son: "
     ],
-    "ARTICLE_TOP_PLAYER_SINGLE": [
-      "El"
-    ],
-    "ARTICLE_TOP_PLAYER_PLURAL": [
+    "ARTICLE_TOP_PLAYER": [
+      "El",
       "Los"
     ],
     "TOP_PLAYER": [
