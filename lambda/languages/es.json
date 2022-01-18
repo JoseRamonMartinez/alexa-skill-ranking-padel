@@ -1,7 +1,7 @@
 {
     "SKILL_NAME": "Ranking de padel",
     "WELCOME": [
-      " Bienvenido a {}.Pideme que te diga el ranking de padel. Para otras cosas que puedo hacer, prueba a decir ayuda."
+      " Bienvenido a {}. Pideme que te diga el ranking de padel. Para otras cosas que puedo hacer, prueba a decir ayuda."
     ],
     "ASK": [
       " ¿Con qué puedo ayudarte?"
