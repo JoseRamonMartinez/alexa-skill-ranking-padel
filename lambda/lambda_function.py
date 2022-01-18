@@ -10,9 +10,9 @@ import random
 import os
 import re
 
-from controllers.get_player_by_name import get_player_by_name
-from controllers.get_player_by_position import get_player_by_position
-from controllers.get_ranking import get_ranking
+from controllers.player_by_name import player_by_name
+from controllers.player_by_position import player_by_position
+from controllers.ranking import ranking
 
 s3_adapter = S3Adapter(bucket_name = os.environ.get("S3_PERSISTENCE_BUCKET"))
 
