@@ -59,7 +59,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
                 .response
             )
 
-class PlayTrendsCountryHandler(AbstractRequestHandler):
+class PlayRankingHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
         return is_intent_name("PlayRanking")(handler_input)
     
