@@ -3,7 +3,6 @@ from ask_sdk_core.dispatch_components import (AbstractRequestHandler, AbstractEx
 from ask_sdk_s3.adapter import S3Adapter
 from ask_sdk_model.ui import SimpleCard
 from ask_sdk_core.skill_builder import CustomSkillBuilder
-from dotenv import load_dotenv
 
 import logging
 import json
