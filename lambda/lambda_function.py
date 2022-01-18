@@ -223,10 +223,7 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
 class InvalidConfigInterceptor(AbstractRequestInterceptor):
     def process(self, handler_input):
         try:
-            load_dotenv()
-            env_variable_1 = os.environ['CONSUMER_KEY']
-            env_variable_2 = os.environ['CONSUMER_SECRET']
-            handler_input.attributes_manager.request_attributes["invalid_config"] = False
+            handler_input.attributes_manager.request_attributes["invalid_config"] = True
         except:
             handler_input.attributes_manager.request_attributes["invalid_config"] = True
 
