@@ -7,4 +7,4 @@ def get_ranking():
     invoke_response = lambda_client.invoke(FunctionName="padel-prod-get_ranking",
                                            InvocationType='RequestResponse')
                                            
-    return invoke_response['Payload'].read()
+    return "hola"
