@@ -12,16 +12,9 @@
     "TOP_RANKING": [
       "Los {} mejores del mundo son: "
     ],
-    "ARTICLE_TOP_PLAYER": [
-      "El",
-      "Los"
-    ],
-    "ARE_TOP_PLAYER": [
-      "es",
-      "son"
-    ],
     "TOP_PLAYER": [
-      " top {} del mundo "
+      "Los top {} son ",
+      "El top {} es "
     ],
     "TOPIC_TWEETS": [
       "Los twits más relevantes sobre {} son: "
