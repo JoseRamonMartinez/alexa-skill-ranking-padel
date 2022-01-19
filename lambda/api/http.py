@@ -10,7 +10,7 @@ def http(path,payload):
     aws_region = os.environ["AWS_REGION"]
     
     headers = {
-    'x-api-key': f'{}'.format(api_key)
+    'x-api-key': api_key
     }
 
     url = f'https://{0}.execute-api.{1}.amazonaws.com{2}'.format(aws_domain, aws_region, path)
