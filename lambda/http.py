@@ -6,7 +6,6 @@ def http(path,payload):
     load_dotenv()
     api_key = os.environ['API_KEY']
     aws_domain = os.environ['AWS_URL']
-
     headers = {
     'x-api-key': api_key
     }
