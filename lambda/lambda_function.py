@@ -11,7 +11,6 @@ import random
 import os
 import re
 
-from http import http
 
 
 s3_adapter = S3Adapter(bucket_name = os.environ.get("S3_PERSISTENCE_BUCKET"))
