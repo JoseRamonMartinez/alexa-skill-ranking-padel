@@ -226,7 +226,8 @@ class InvalidConfigInterceptor(AbstractRequestInterceptor):
         try:
             load_dotenv()
             api_key = os.environ['API_KEY']
-            aws_url = os.environ['AWS_URL']
+            aws_domain = os.environ['AWS_DOMAIN']
+            aws_region = os.environ["AWS_REGION"]
             handler_input.attributes_manager.request_attributes["invalid_config"] = False
         except:
             handler_input.attributes_manager.request_attributes["invalid_config"] = True
