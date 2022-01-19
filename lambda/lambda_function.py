@@ -11,11 +11,11 @@ import random
 import os
 import re
 
-from controllers.get_player_by_name import get_player_by_name
-from controllers.get_player_by_position import get_player_by_position
-from controllers.get_ranking import get_ranking
+from http import http
+
 
 s3_adapter = S3Adapter(bucket_name = os.environ.get("S3_PERSISTENCE_BUCKET"))
+
 
 # Initializing the logger and setting the level to "INFO"
 # Read more about it here https://www.loggly.com/ultimate-guide/python-logging-basics/
@@ -226,7 +226,8 @@ class InvalidConfigInterceptor(AbstractRequestInterceptor):
     def process(self, handler_input):
         try:
             load_dotenv()
-            env_variable_1 = os.environ['API_KEY']
+            api_key = os.environ['API_KEY']
+            aws_url = os.environ['AWS_URL']
             handler_input.attributes_manager.request_attributes["invalid_config"] = False
         except:
             handler_input.attributes_manager.request_attributes["invalid_config"] = True
