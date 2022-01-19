@@ -13,7 +13,7 @@ def http(path,payload):
     'x-api-key': api_key
     }
 
-    url = f'https://{0}.execute-api.{1}.amazonaws.com{2}'.format(aws_domain, aws_region, path)
+    url = 'https://{}.execute-api.{}.amazonaws.com{}'.format(aws_domain, aws_region, path)
 
     #response = requests.get(url, headers=headers, data=payload)
 
