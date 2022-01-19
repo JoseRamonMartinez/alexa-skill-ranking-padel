@@ -6,13 +6,15 @@ def http(path,payload):
     load_dotenv()
 
     api_key = os.environ['API_KEY']
-    aws_domain = os.environ['AWS_URL']
+    aws_domain = os.environ['AWS_DOMAIN']
+    aws_region = os.environ["AWS_REGION"]
+    
 https://xj3lx7x6cc.execute-api.eu-west-1.amazonaws.com
     headers = {
     'x-api-key': api_key
     }
 
-    url = f'{}{}'.format(aws_domain, path)
+    url = f'https://{}.execute-api.{}.amazonaws.com'.format(aws_domain, aws_region, path)
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
