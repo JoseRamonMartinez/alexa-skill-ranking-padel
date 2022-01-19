@@ -2,8 +2,8 @@ import requests
 from dotenv import load_dotenv
 
 def http(path,payload):
-    load_dotenv()
 
+    load_dotenv()
     api_key = os.environ['API_KEY']
     aws_domain = os.environ['AWS_URL']
 
