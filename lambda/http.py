@@ -9,12 +9,11 @@ def http(path,payload):
     aws_domain = os.environ['AWS_DOMAIN']
     aws_region = os.environ["AWS_REGION"]
     
-https://xj3lx7x6cc.execute-api.eu-west-1.amazonaws.com
     headers = {
     'x-api-key': api_key
     }
 
-    url = f'https://{}.execute-api.{}.amazonaws.com'.format(aws_domain, aws_region, path)
+    url = f'https://{}.execute-api.{}.amazonaws.com{}'.format(aws_domain, aws_region, path)
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
