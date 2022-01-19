@@ -5,7 +5,6 @@ import os
 def http(path,payload):
 
     load_dotenv()
-
     api_key = os.environ['API_KEY']
     aws_domain = os.environ['AWS_DOMAIN']
     aws_region = os.environ["AWS_REGION"]
