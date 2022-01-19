@@ -18,4 +18,4 @@ def http(path,payload):
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    return response.text
+    return "response.text"
