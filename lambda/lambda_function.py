@@ -90,18 +90,17 @@ class PlayTopRankingHandler(AbstractRequestHandler):
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
-        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
-        number = int(number)
-        #ranking_list = json.loads(http('/prod/players/ranking'))
-        #sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number]
+        number = int(handler_input.request_envelope.request.intent.slots["number"].slot_value.value)
+        ranking_list = json.loads(http('/prod/players/ranking'))
+        sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number]
         speech_output = f'{language_prompts["TOP_RANKING"][0]}'.format(number) if number < 2 else f'{language_prompts["TOP_RANKING"][1]}'.format(number)
-        #speech_output+=f'{sorted_ranking_list[0]["name"].replace("-", " ").title()}'
-        #for player in sorted_ranking_list[1:(len(sorted_ranking_list)-1)]:
-        #    player_name = player["name"].replace("-", " ").title()
-        #    speech_output+=f', {player_name} \r\n'
+        speech_output+=f'{sorted_ranking_list[0]["name"].replace("-", " ").title()}'
+        for player in sorted_ranking_list[1:(len(sorted_ranking_list)-1)]:
+            player_name = player["name"].replace("-", " ").title()
+            speech_output+=f', {player_name} \r\n'
         
-        #if len(sorted_ranking_list)>1:
-        #    speech_output+=f'y {sorted_ranking_list[len(sorted_ranking_list)-1]["name"].replace("-", " ").title()} \r\n'
+        if len(sorted_ranking_list)>1:
+            speech_output+=f'y {sorted_ranking_list[len(sorted_ranking_list)-1]["name"].replace("-", " ").title()} \r\n'
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
         return(
@@ -120,7 +119,7 @@ class PlayPlayerByPositionHandler(AbstractRequestHandler):
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
-        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
+        number = int(handler_input.request_envelope.request.intent.slots["number"].slot_value.value)
         ranking_list = json.loads(http('/prod/players/ranking/{number}'))
         speech_output = language_prompts["TOP_PLAYER"][len(ranking_list)-1]
 
