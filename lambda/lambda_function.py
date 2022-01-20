@@ -67,7 +67,7 @@ class PlayRankingHandler(AbstractRequestHandler):
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
-        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
+        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value if handler_input.request_envelope.request.intent.slots["number"].slot_value.value else None
         number_filter = int(number) if number else 3
         ranking_list = json.loads(http('/prod/players/ranking',{}))
         speech_output = random.choice(language_prompts["TOP_RANKING"]).format(number_filter)+'\r\n'
