@@ -123,7 +123,7 @@ class PlayPlayerByPositionHandler(AbstractRequestHandler):
         skill_name = language_prompts["SKILL_NAME"]
         number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
         ranking_list = json.loads(http('/prod/players/ranking/{number}',{}))
-        speech_output = random.choice(language_prompts["RANKING"])
+        speech_output = random.choice(language_prompts["TOP_PLAYERS"])
 
         for player in ranking_list:
             
