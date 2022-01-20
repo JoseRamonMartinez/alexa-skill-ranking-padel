@@ -91,9 +91,9 @@ class PlayTopRankingHandler(AbstractRequestHandler):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
         number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
-        ranking_list = json.loads(http('/prod/players/ranking'))
-        speech_output = '{language_prompts["TOP_RANKING"][0]}'.format(number) if number < 2 else '{language_prompts["TOP_RANKING"][1]}'.format(number)
+        #ranking_list = json.loads(http('/prod/players/ranking'))
         #sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number]
+        speech_output = f'{language_prompts["TOP_RANKING"][0]}'.format(number) if number < 2 else f'{language_prompts["TOP_RANKING"][1]}'.format(number)
         #speech_output+=f'{sorted_ranking_list[0]["name"].replace("-", " ").title()}'
         #for player in sorted_ranking_list[1:(len(sorted_ranking_list)-1)]:
         #    player_name = player["name"].replace("-", " ").title()
