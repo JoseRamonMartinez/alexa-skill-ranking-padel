@@ -84,7 +84,6 @@ class PlayRankingHandler(AbstractRequestHandler):
             )
 
 
-
 class PlayTopRankingHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
         return is_intent_name("PlayTopRanking")(handler_input)
@@ -123,14 +122,14 @@ class PlayPlayerByPositionHandler(AbstractRequestHandler):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
         number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
-        player_list = ranking_list=get_player_by_position(number)
-        
-        speech_output = language_prompts["TOP_PLAYER"][1].format(number) if len(player_list) > 1 else language_prompts["TOP_PLAYER"][0].format(number)
-        player_name = player_list[0]["name"].replace("-", " ").title()
-        speech_output = f'{player_name}'
-        for player in player_list[1:len(player_list)]:
-            player_name = player["name"].replace("-", " ").title()
-            speech_output+=f'y {player_name} \r\n'
+        ranking_list = json.loads(http('/prod/players/ranking/{number}',{}))
+        speech_output = random.choice(language_prompts["RANKING"])
+
+        for player in ranking_list:
+            
+        speech_output+=sorted_ranking_list[0]["name"].replace("-", " ").title() + ', '
+        speech_output+=sorted_ranking_list[1]["name"].replace("-", " ").title() + ' y '
+        speech_output+=sorted_ranking_list[2]["name"].replace("-", " ").title()
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
         return(
