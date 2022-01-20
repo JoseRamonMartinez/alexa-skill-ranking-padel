@@ -59,7 +59,6 @@ class LaunchRequestHandler(AbstractRequestHandler):
                 .set_card(SimpleCard(skill_name,speech_output))
                 .response
             )
-
 class PlayRankingHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
         return is_intent_name("PlayRanking")(handler_input)
@@ -72,6 +71,39 @@ class PlayRankingHandler(AbstractRequestHandler):
         ranking_list = json.loads(http('/prod/players/ranking',{}))
         speech_output = f'{language_prompts["TOP_RANKING"][0]} \r\n'.format(number_filter) if number_filter <2 else f'{language_prompts["TOP_RANKING"][1]} \r\n'.format(number_filter)
         sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number_filter]
+        speech_output+=f'{sorted_ranking_list[0]["name"].replace("-", " ").title()}'
+        for player in sorted_ranking_list[1:(len(sorted_ranking_list)-1)]:
+            player_name = player["name"].replace("-", " ").title()
+            speech_output+=f', {player_name} \r\n'
+        
+        if len(sorted_ranking_list)>1:
+            speech_output+=f'y {sorted_ranking_list[len(sorted_ranking_list)-1]["name"].replace("-", " ").title()} \r\n'
+        
+        reprompt = random.choice(language_prompts["ASK_MORE"])
+        
+        return(
+            handler_input.response_builder
+                .speak(speech_output+reprompt)
+                .ask(reprompt)
+                .set_card(SimpleCard(skill_name,speech_output))
+                .response
+            )
+
+
+
+class PlayTopRankingHandler(AbstractRequestHandler):
+    def can_handle(self, handler_input):
+        return is_intent_name("PlayTopRanking")(handler_input)
+    
+    def handle(self,handler_input):
+        language_prompts = handler_input.attributes_manager.request_attributes["_"]
+        skill_name = language_prompts["SKILL_NAME"]
+        ranking_list = json.loads(http('/prod/players/ranking',{}))
+        
+        
+        
+        speech_output = f'{language_prompts["TOP_RANKING"][0]} \r\n'.format(number) if number <2 else f'{language_prompts["TOP_RANKING"][1]} \r\n'.format(number)
+        sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number]
         speech_output+=f'{sorted_ranking_list[0]["name"].replace("-", " ").title()}'
         for player in sorted_ranking_list[1:(len(sorted_ranking_list)-1)]:
             player_name = player["name"].replace("-", " ").title()
@@ -287,6 +319,7 @@ sb = CustomSkillBuilder (persistence_adapter = s3_adapter)
 sb.add_request_handler(InvalidConfigHandler())
 sb.add_request_handler(LaunchRequestHandler())
 sb.add_request_handler(PlayRankingHandler())
+sb.add_request_handler(PlayTopRankingHandler())
 sb.add_request_handler(PlayPlayerByPositionHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(HelpIntentHandler())
