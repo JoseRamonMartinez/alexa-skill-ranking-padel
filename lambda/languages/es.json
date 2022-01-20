@@ -13,8 +13,8 @@
       "Los {} mejores del mundo son: "
     ],
     "TOP_PLAYER": [
-      "Los top {} son ",
-      "El top {} es "
+      "El top {} es ",
+      "Los top {} son "
     ],
     "TOPIC_TWEETS": [
       "Los twits más relevantes sobre {} son: "
