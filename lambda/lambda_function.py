@@ -67,7 +67,7 @@ class PlayRankingHandler(AbstractRequestHandler):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
         number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
-        ranking_list = json.loads(http('/prod/players/ranking',{}))
+        ranking_list = json.loads(http('/prod/players/ranking'))
         sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number_filter]
         speech_output = random.choice(language_prompts["RANKING"])
         speech_output+=sorted_ranking_list[0]["name"].replace("-", " ").title() + ', '
@@ -92,7 +92,7 @@ class PlayTopRankingHandler(AbstractRequestHandler):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
         number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
-        ranking_list = json.loads(http('/prod/players/ranking',{}))
+        ranking_list = json.loads(http('/prod/players/ranking'))
         speech_output = f'{language_prompts["TOP_RANKING"][0]} \r\n'.format(number) if number <2 else f'{language_prompts["TOP_RANKING"][1]} \r\n'.format(number)
         sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number]
         speech_output+=f'{sorted_ranking_list[0]["name"].replace("-", " ").title()}'
@@ -122,7 +122,7 @@ class PlayPlayerByPositionHandler(AbstractRequestHandler):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
         number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
-        ranking_list = json.loads(http('/prod/players/ranking/{number}',{}))
+        ranking_list = json.loads(http('/prod/players/ranking/{number}'))
         speech_output = language_prompts["TOP_PLAYERS"][len(ranking_list)-1]
 
         for player in ranking_list:
