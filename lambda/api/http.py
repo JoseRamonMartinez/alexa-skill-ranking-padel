@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 import os
 import json
 
-def http(path,payload):
-
+def http(path):
+    payload={}
     load_dotenv()
     api_key = os.environ['API_KEY']
     aws_domain = os.environ['AWS_DOMAIN']
