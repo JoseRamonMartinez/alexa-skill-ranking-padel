@@ -93,15 +93,15 @@ class PlayTopRankingHandler(AbstractRequestHandler):
         number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
         ranking_list = json.loads(http('/prod/players/ranking'))
         speech_output = f'{language_prompts["TOP_RANKING"][0]} \r\n'.format(number) if number <2 else f'{language_prompts["TOP_RANKING"][1]} \r\n'.format(number)
-        sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number]
-        speech_output+=f'{sorted_ranking_list[0]["name"].replace("-", " ").title()}'
-        for player in sorted_ranking_list[1:(len(sorted_ranking_list)-1)]:
-            player_name = player["name"].replace("-", " ").title()
-            speech_output+=f', {player_name} \r\n'
+        #sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number]
+        #speech_output+=f'{sorted_ranking_list[0]["name"].replace("-", " ").title()}'
+        #for player in sorted_ranking_list[1:(len(sorted_ranking_list)-1)]:
+        #    player_name = player["name"].replace("-", " ").title()
+        #    speech_output+=f', {player_name} \r\n'
         
-        if len(sorted_ranking_list)>1:
-            speech_output+=f'y {sorted_ranking_list[len(sorted_ranking_list)-1]["name"].replace("-", " ").title()} \r\n'
-        
+        #if len(sorted_ranking_list)>1:
+        #    speech_output+=f'y {sorted_ranking_list[len(sorted_ranking_list)-1]["name"].replace("-", " ").title()} \r\n'
+        speech_output ="hola"
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
         return(
