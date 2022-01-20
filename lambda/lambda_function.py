@@ -66,10 +66,9 @@ class PlayRankingHandler(AbstractRequestHandler):
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
-        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value if handler_input.request_envelope.request.intent.slots["number"].slot_value.value else None
-        number_filter = int(number) if number else 3
+        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
         ranking_list = json.loads(http('/prod/players/ranking',{}))
-        speech_output = f'{language_prompts["TOP_RANKING"][0]} \r\n'.format(number_filter) if number_filter <2 else f'{language_prompts["TOP_RANKING"][1]} \r\n'.format(number_filter)
+        speech_output = f'{language_prompts["TOP_RANKING"][0]} \r\n'.format(number) if number_filter <2 else f'{language_prompts["TOP_RANKING"][1]} \r\n'.format(number_filter)
         sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number_filter]
         speech_output+=f'{sorted_ranking_list[0]["name"].replace("-", " ").title()}'
         for player in sorted_ranking_list[1:(len(sorted_ranking_list)-1)]:
@@ -98,7 +97,7 @@ class PlayTopRankingHandler(AbstractRequestHandler):
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
-        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value if handler_input.request_envelope.request.intent.slots["number"].slot_value.value else None
+        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
         ranking_list = json.loads(http('/prod/players/ranking',{}))
         speech_output = f'{language_prompts["TOP_RANKING"][0]} \r\n'.format(number) if number <2 else f'{language_prompts["TOP_RANKING"][1]} \r\n'.format(number)
         sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number]
