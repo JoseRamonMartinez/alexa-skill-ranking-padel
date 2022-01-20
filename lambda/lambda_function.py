@@ -69,13 +69,12 @@ class PlayRankingHandler(AbstractRequestHandler):
         number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
         ranking_list = http('/prod/players/ranking',{})
         
-        #speech_output = random.choice(language_prompts["TOP_RANKING"]).format(number)+'\r\n'
+        speech_output = random.choice(language_prompts["TOP_RANKING"]).format(number)+'\r\n'
         #sorted_ranking_list = sorted(ranking_list, key=lambda k: k['position'], reverse=False)[0:number]
         #for player in sorted_ranking_list:
         #    player_name = player["name"].replace("-", " ").title()
         #    speech_output+=f'{player_name} \r\n'
         
-        speech_output = random.choice(language_prompts["ASK_MORE"])
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
         return(
