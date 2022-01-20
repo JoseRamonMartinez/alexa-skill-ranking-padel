@@ -101,7 +101,6 @@ class PlayTopRankingHandler(AbstractRequestHandler):
         
         #if len(sorted_ranking_list)>1:
         #    speech_output+=f'y {sorted_ranking_list[len(sorted_ranking_list)-1]["name"].replace("-", " ").title()} \r\n'
-        speech_output ="hola"
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
         return(
