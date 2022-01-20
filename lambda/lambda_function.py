@@ -77,7 +77,7 @@ class PlayRankingHandler(AbstractRequestHandler):
             player_name = player["name"].replace("-", " ").title()
             speech_output+=f', {player_name} \r\n'
         
-        if len(sorted_ranking_list)>0:
+        if len(sorted_ranking_list)>1:
             speech_output+=f'y {sorted_ranking_list[len(sorted_ranking_list)-1]["name"].replace("-", " ").title()} \r\n'
         
         reprompt = random.choice(language_prompts["ASK_MORE"])
