@@ -9,6 +9,9 @@
     "ASK_MORE": [
       " ¿Con qué más puedo ayudarte?"
     ],
+    "RANKING": [
+      "Los 3 mejores del mundo son: "
+    ],
     "TOP_RANKING": [
       "El número {} del mundo es: ",
       "Los {} mejores del mundo son: "
