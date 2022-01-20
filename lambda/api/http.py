@@ -15,6 +15,6 @@ def http(path,payload):
 
     url = 'https://{}.execute-api.{}.amazonaws.com{}'.format(aws_domain, aws_region, path)
 
-    #response = requests.get(url, headers=headers, data=payload)
+    response = requests.get(url, headers=headers, data=payload)
 
     return "hola"#response.text
