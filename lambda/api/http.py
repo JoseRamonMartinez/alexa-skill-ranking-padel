@@ -17,4 +17,4 @@ def http(path,payload):
 
     response = requests.get(url, headers=headers, data=payload)
 
-    return response
+    return response.text
