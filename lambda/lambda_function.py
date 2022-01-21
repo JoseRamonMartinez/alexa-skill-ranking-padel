@@ -126,6 +126,9 @@ class PlayPlayerByPositionHandler(AbstractRequestHandler):
         for player in ranking_list:
             speech_output+=player["name"].replace("-", " ").title()
             speech_output += ' y ' if (len(ranking_list)>1) and (player == ranking_list[0]) else ""
+        
+        if len(ranking_list) == 0:
+            speech_output = random.choice(language_prompts["TOP_PLAYER"]).format(number, number-1)
 
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
