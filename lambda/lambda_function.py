@@ -140,6 +140,32 @@ class PlayPlayerByPositionHandler(AbstractRequestHandler):
                 .response
             )
 
+class PlayPlayerByNameHandler(AbstractRequestHandler):
+    def can_handle(self, handler_input):
+        return is_intent_name("PlayPlayerByName")(handler_input)
+    
+    def handle(self,handler_input):
+        language_prompts = handler_input.attributes_manager.request_attributes["_"]
+        skill_name = language_prompts["SKILL_NAME"]
+        name = handler_input.request_envelope.request.intent.slots["name"].slot_value.value
+        name_formatted = name.lower().replace(" ", "-")
+        player_data = ast.literal_eval(json.loads(http('/prod/players/name/{}'.format(name_formatted))))
+
+        if len(player_data) == 0:
+            speech_output = language_prompts["PLAYER_NO_EXIST"][len(ranking_list)-1].format(number)
+        else:
+            speech_output = language_prompts["TOP_PLAYER"][len(ranking_list)-1].format(number)
+
+        reprompt = random.choice(language_prompts["ASK_MORE"])
+        
+        return(
+            handler_input.response_builder
+                .speak(speech_output+reprompt)
+                .ask(reprompt)
+                .set_card(SimpleCard(skill_name,speech_output))
+                .response
+            )
+
 class CancelOrStopIntentHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
         return (is_intent_name("AMAZON.CancelIntent")(handler_input) or
