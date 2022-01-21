@@ -4,10 +4,13 @@
       " Bienvenido a {}. Pideme que te diga el ranking de padel. Para otras cosas que puedo hacer, prueba a decir ayuda."
     ],
     "ASK": [
-      " ¿Con qué puedo ayudarte?"
+      " ¿Con qué puedo ayudarte?",
+      " ¿Qué quieres saber?"
     ],
     "ASK_MORE": [
-      " ¿Con qué más puedo ayudarte?"
+      " ¿Con qué más puedo ayudarte?",
+      " ¿Algo más?",
+      " ¿Necesitas algo más?"
     ],
     "RANKING": [
       "Los 3 mejores del mundo son: "
