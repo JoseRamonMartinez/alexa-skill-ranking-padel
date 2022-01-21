@@ -123,9 +123,9 @@ class PlayPlayerByPositionHandler(AbstractRequestHandler):
         ranking_list = json.loads(http('/prod/players/ranking/{number}'))
         speech_output = language_prompts["TOP_PLAYER"][len(ranking_list)-1]
 
-        for player in ranking_list:
-            speech_output+=player["name"].replace("-", " ").title()
-            speech_output += ' y ' if (len(ranking_list)>1) and (player == ranking_list[0]) else ""
+        #for player in ranking_list:
+        #    speech_output+=player["name"].replace("-", " ").title()
+        #    speech_output += ' y ' if (len(ranking_list)>1) and (player == ranking_list[0]) else ""
 
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
