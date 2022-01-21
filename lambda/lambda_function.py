@@ -154,7 +154,7 @@ class PlayPlayerByNameHandler(AbstractRequestHandler):
         if len(player_data) == 0:
             speech_output = language_prompts["PLAYER_NO_EXIST"][len(ranking_list)-1].format(number)
         else:
-            speech_output = language_prompts["TOP_PLAYER"][len(ranking_list)-1].format(number)
+            speech_output = language_prompts["PLAYER_EXIST"][len(ranking_list)-1].format(number)
 
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
