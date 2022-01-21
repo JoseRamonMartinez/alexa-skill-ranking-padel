@@ -29,6 +29,9 @@
     "PLAYER_NO_EXIST": [
       "El jugador {} no existe o no es el nombre exacto con apellidos"
     ],
+    "PLAYER_EXIST": [
+      "El jugador {} es el top {} del mundo con {} puntos a sus {} años. Juega en el lado {} junto a {}"
+    ],
     "SAY": [
       "dice",
       "comenta",
