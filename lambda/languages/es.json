@@ -26,8 +26,8 @@
       "El top {} es ",
       "Los top {} son "
     ],
-    "TOPIC_TWEETS": [
-      "Los twits más relevantes sobre {} son: "
+    "PLAYER_NO_EXIST": [
+      "El jugador {} no existe o no es el nombre exacto con apellidos"
     ],
     "SAY": [
       "dice",
