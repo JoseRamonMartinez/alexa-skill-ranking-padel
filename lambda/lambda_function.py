@@ -121,7 +121,7 @@ class PlayPlayerByPositionHandler(AbstractRequestHandler):
         skill_name = language_prompts["SKILL_NAME"]
         number = int(handler_input.request_envelope.request.intent.slots["number"].slot_value.value)
         ranking_list = json.loads(http('/prod/players/ranking/{number}'))
-        speech_output = language_prompts["TOP_PLAYER"][len(ranking_list)-1]
+        speech_output = "hola"#language_prompts["TOP_PLAYER"][len(ranking_list)-1]
 
         #for player in ranking_list:
         #    speech_output+=player["name"].replace("-", " ").title()
