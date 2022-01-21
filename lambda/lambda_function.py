@@ -149,12 +149,13 @@ class PlayPlayerByNameHandler(AbstractRequestHandler):
         skill_name = language_prompts["SKILL_NAME"]
         name = handler_input.request_envelope.request.intent.slots["name"].slot_value.value
         name_formatted = name.lower().replace(" ", "-")
-        player_data = ast.literal_eval(json.loads(http('/prod/players/name/{}'.format(name_formatted))))
+        player_list = ast.literal_eval(json.loads(http('/prod/players/name/{}'.format(name_formatted))))
 
-        if len(player_data) == 0:
-            speech_output = language_prompts["PLAYER_NO_EXIST"][len(ranking_list)-1].format(number)
+        if len(player_list) == 0:
+            speech_output = random.choice(language_prompts["PLAYER_NO_EXIST"]).format(name)
         else:
-            speech_output = language_prompts["PLAYER_EXIST"][len(ranking_list)-1].format(number)
+            player_data = player_list[0]
+            speech_output = random.choice(language_prompts["PLAYER_EXIST"]).format(name, data["position"], data["score"], data[won_matches])
 
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
