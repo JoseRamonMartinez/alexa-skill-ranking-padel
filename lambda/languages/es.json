@@ -19,6 +19,9 @@
       "El número {} del mundo es: ",
       "Los {} mejores del mundo son: "
     ],
+    "DRAW":[
+      " No hay número {} porque hay dos números {} debido a un empate de puntos."
+    ],
     "TOP_PLAYER": [
       "El top {} es ",
       "Los top {} son "
