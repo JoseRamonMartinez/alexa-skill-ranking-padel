@@ -14,6 +14,8 @@ import ast
 
 from api.http import http
 
+from controllers.play_ranking import play_ranking 
+
 s3_adapter = S3Adapter(bucket_name = os.environ.get("S3_PERSISTENCE_BUCKET"))
 
 
@@ -66,12 +68,7 @@ class PlayRankingHandler(AbstractRequestHandler):
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
-        ranking_list = json.loads(http('/prod/players/ranking'))
-        sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:3]
-        speech_output = random.choice(language_prompts["RANKING"])
-        speech_output+=sorted_ranking_list[0]["name"].replace("-", " ").title() + ', '
-        speech_output+=sorted_ranking_list[1]["name"].replace("-", " ").title() + ' y '
-        speech_output+=sorted_ranking_list[2]["name"].replace("-", " ").title()
+        speech_output = play_ranking(language_prompts)
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
         return(
