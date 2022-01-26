@@ -16,11 +16,11 @@ from api.http import http
 
 from controllers.play_ranking import play_ranking
 from controllers.play_top_ranking import play_top_ranking
-from controllers.play_player_by_position import play_player_by_position 
+from controllers.play_player_by_position import play_player_by_position
 from controllers.play_player_by_name import play_player_by_name
 from controllers.play_player_partner import play_player_partner
 from controllers.play_player_side import play_player_side
-from controllers.play_player_data import play_player_data
+
 
 s3_adapter = S3Adapter(bucket_name = os.environ.get("S3_PERSISTENCE_BUCKET"))
 
@@ -67,6 +67,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
                 .set_card(SimpleCard(skill_name,speech_output))
                 .response
             )
+
 class PlayRankingHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
         return is_intent_name("PlayRanking")(handler_input)
@@ -181,27 +182,6 @@ class PlayPlayerSideHandler(AbstractRequestHandler):
         name = handler_input.request_envelope.request.intent.slots["name"].slot_value.value
 
         speech_output = play_player_side(language_prompts, name)
-
-        reprompt = random.choice(language_prompts["ASK_MORE"])
-        
-        return(
-            handler_input.response_builder
-                .speak(speech_output+reprompt)
-                .ask(reprompt)
-                .set_card(SimpleCard(skill_name,speech_output))
-                .response
-            )
-
-class PlayPlayerDataHandler(AbstractRequestHandler):
-    def can_handle(self, handler_input):
-        return is_intent_name("PlayPlayerData")(handler_input)
-    
-    def handle(self,handler_input):
-        language_prompts = handler_input.attributes_manager.request_attributes["_"]
-        skill_name = language_prompts["SKILL_NAME"]
-        name = handler_input.request_envelope.request.intent.slots["name"].slot_value.value
-
-        speech_output = play_player_data(language_prompts, name)
 
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
@@ -388,7 +368,6 @@ sb.add_request_handler(PlayPlayerByPositionHandler())
 sb.add_request_handler(PlayPlayerByNameHandler())
 sb.add_request_handler(PlayPlayerPartnerHandler())
 sb.add_request_handler(PlayPlayerSideHandler())
-sb.add_request_handler(PlayPlayerDataHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(RepeatIntentHandler())

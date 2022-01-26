@@ -1,7 +1,7 @@
 {
     "SKILL_NAME": "Ranking de pádel",
     "WELCOME": [
-      " Bienvenido a {}. Pideme que te diga el ranking de pádel. Para otras cosas que puedo hacer, prueba a decir ayuda."
+      " Bienvenido a {}. Pídeme que te diga el ranking de pádel. Para otras cosas que puedo hacer, prueba a decir ayuda."
     ],
     "ASK": [
       " ¿Con qué puedo ayudarte?",
@@ -29,14 +29,15 @@
     "PLAYER_NO_EXIST": [
       "El jugador {} no existe o no es el nombre exacto con apellidos"
     ],
-    "PLAYER_EXIST": [
-      "El jugador {} es el top {} del mundo con {} puntos a sus {} años. Juega en el lado del {} junto a {}"
-    ],
     "PLAYER_PARTNER":[
       "La pareja de {} es {}"
     ],
     "PLAYER_SIDE":[
       "{} juega en el lado del {}"
+    ],
+    "SIDE_TRANSLATE":[
+      "Drive",
+      "Revés"
     ],
     "PLAYER_DATA":[
       "{} es el top {} del mundo con {} puntos. Juega en el lado del {} junto a {}. Nació el {} en {}. Actualmente mide {} y reside en {}"

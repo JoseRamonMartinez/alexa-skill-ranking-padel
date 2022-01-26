@@ -1,72 +1,72 @@
 {
-    "SKILL_NAME": "Ranking de padel",
+    "SKILL_NAME": "Paddle Ranking",
     "WELCOME": [
-      " Bienvenido a {}. Pideme que te diga el ranking de padel. Para otras cosas que puedo hacer, prueba a decir ayuda."
+      " Welcome to {}. Ask me to tell you the paddle ranking. For other things I can do, try saying help."
     ],
     "ASK": [
-      " ¿Con qué puedo ayudarte?",
-      " ¿Qué quieres saber?"
+      " How can I help you?",
+      " What do you want to know?"
     ],
     "ASK_MORE": [
-      " ¿Con qué más puedo ayudarte?",
-      " ¿Algo más?",
-      " ¿Necesitas algo más?"
+      " What else can I do for you?",
+      " Anything else?"
     ],
     "RANKING": [
-      "Los 3 mejores del mundo son: "
+      "The top 3 in the world are: "
     ],
     "TOP_RANKING": [
-      "El número {} del mundo es: ",
-      "Los {} mejores del mundo son: "
+      "The number {} of the world is: ",
+      "The {} best in the world are: "
     ],
     "DRAW":[
-      " No hay número {} porque hay dos números {} debido a un empate de puntos."
+      " There is no number {} because there are two numbers {} due to a tie in points."
     ],
     "TOP_PLAYER": [
-      "El top {} es ",
-      "Los top {} son "
+      "The top {} is ",
+      "The top {} are "
     ],
     "PLAYER_NO_EXIST": [
-      "El jugador {} no existe o no es el nombre exacto con apellidos"
-    ],
-    "PLAYER_EXIST": [
-      "El jugador {} es el top {} del mundo con {} puntos a sus {} años. Juega en el lado del {} junto a {}"
+      "The player {} does not exist or is not the exact name with last name"
     ],
     "PLAYER_PARTNER":[
-      "La pareja de {} es {}"
+      "The partner of {} is {}"
     ],
     "PLAYER_SIDE":[
-      "{} juega en el lado del {}"
+      "{} plays on the {} side"
+    ],
+    "SIDE_TRANSLATE":[
+      "Drive",
+      "Backhand"
     ],
     "PLAYER_DATA":[
-      "{} es el top {} del mundo con {} puntos. Juega en el lado del {} junto a {}. Nació el {} en {}. Actualmente mide {} y reside en {}"
+      "{} is the top {} in the world with {} points. He plays on the {} side next to {}. He was born on {} in {}. He is currently {} and lives in {}"
     ],
     "REPEAT": [
-      "He dicho... {}"
+      "I said... {}"
     ],
     "REPEAT_REPROMPT": [
       "{}"
     ],
     "HELP": [
-    "Prueba consultar una posición del ranking. También, puedes probar a pedirme información sobre un jugador en concreto. Por ejemplo, quién es el número uno."
+    "Try consulting a position in the ranking. Also, you can try asking me for information about a specific player. For example, who is number one."
     ],
     "HELP_REPROMPT": [
-      "¿Con qué puedo ayudarte?"
+      "What can i do?"
     ],
     "REFLECTOR": [
-      "Acabas de ejecutar {}. Estás escuchando esta respuesta porque el intent llamado: {}}s no tiene un intent handler aún."
-    ],
-    "FALLBACK": [
-      "Hmm, No estoy seguro. Prueba a preguntarme quien es el top uno del mundo. Si te encuentras algo perdido, di ayuda o cierra esta skill diciendo adios."
-    ],
-    "FALLBACK_REPROMPT": [
-      "No logré entenderlo. ¿Con qué puedo ayudarte?"
-    ],
-    "CANCEL_STOP_RESPONSE": [
-      "¡Hasta la próxima!",
-      "¡Adios!"
-    ],
-    "ENV_NOT_CONFIGURED": "The environment for this skill is not properly configured. Most likely, you just need to rename the example dot ENV file to just dot ENV. Please see the readme file for help.",
-    "ERROR": "Disculpa, algo ha fallado. Inténtalo de nuevo o di ayuda",
-    "ERROR_REPROMPT": "¿Puedes repetirlo?"
+        "You have just executed {}. You are hearing this response because the intent called: {}}s doesn't have a intent handler yet."
+      ],
+      "FALLBACK": [
+        "Hmm, I'm not sure. Try asking me for country-specific trends or twitts on a topic. If you find yourself at a loss, say help or close this skill by saying goodbye."
+       ],
+      "FALLBACK_REPROMPT": [
+        "I didn't get it, what can I help you with?"
+      ],
+      "CANCEL_STOP_RESPONSE": [
+        "Good bye",
+        "Okay. I'll be here if you need me."
+      ],
+      "ENV_NOT_CONFIGURED": "The environment for this skill is not properly configured. Most likely, you just need to rename the example dot ENV file to just dot ENV. Please see the readme file for help.",
+      "ERROR": "Sorry, something was wrong. Repeat or say help",
+      "ERROR_REPROMPT": "Could you say that again?"
 }

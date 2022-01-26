@@ -11,6 +11,7 @@ def play_player_side(language_prompts, name):
         speech_output = random.choice(language_prompts["PLAYER_NO_EXIST"]).format(name)
     else:
         player_data = player_list[0]
-        speech_output = random.choice(language_prompts["PLAYER_SIDE"]).format(name, player_data["data"]["side"])
+        side = language_prompts["SIDE_TRANSLATE"][0] if player_data["data"]["side"] == "Drive" else language_prompts["SIDE_TRANSLATE"][1]
+        speech_output = random.choice(language_prompts["PLAYER_SIDE"]).format(name, side)
 
     return speech_output

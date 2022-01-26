@@ -11,6 +11,17 @@ def play_player_by_name(language_prompts, name):
         speech_output = random.choice(language_prompts["PLAYER_NO_EXIST"]).format(name)
     else:
         player_data = player_list[0]
-        speech_output = random.choice(language_prompts["PLAYER_EXIST"]).format(name, data["position"], data["score"], data["won_matches"])
+        side = language_prompts["SIDE_TRANSLATE"][0] if player_data["data"]["side"] == "Drive" else language_prompts["SIDE_TRANSLATE"][1]
 
+        speech_output = random.choice(language_prompts["PLAYER_PARTNER"]).format(
+                                                                                    name, 
+                                                                                    player_data["position"],
+                                                                                    player_data["data"]["score"], 
+                                                                                    side,
+                                                                                    player_data["data"]["partner"],
+                                                                                    player_data["data"]["born_date"],
+                                                                                    player_data["data"]["born_place"],
+                                                                                    player_data["data"]["height"],
+                                                                                    player_data["data"]["home_place"],
+                                                                                )
     return speech_output
