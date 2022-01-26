@@ -14,7 +14,13 @@ import ast
 
 from api.http import http
 
-from controllers.play_ranking import play_ranking 
+from controllers.play_ranking import play_ranking
+from controllers.play_top_ranking import play_top_ranking
+from controllers.play_player_by_position import play_player_by_position 
+from controllers.play_player_by_name import play_player_by_name
+from controllers.play_player_partner import play_player_partner
+from controllers.play_player_side import play_player_side
+from controllers.play_player_data import play_player_data
 
 s3_adapter = S3Adapter(bucket_name = os.environ.get("S3_PERSISTENCE_BUCKET"))
 
@@ -87,17 +93,10 @@ class PlayTopRankingHandler(AbstractRequestHandler):
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
-        number = int(handler_input.request_envelope.request.intent.slots["number"].slot_value.value)
-        ranking_list = json.loads(http('/prod/players/ranking'))
-        sorted_ranking_list = sorted(ast.literal_eval(ranking_list), key=lambda k: k['position'], reverse=False)[0:number]
-        speech_output = language_prompts["TOP_RANKING"][0].format(number) if number < 2 else language_prompts["TOP_RANKING"][1].format(number)
-        speech_output+=f'{sorted_ranking_list[0]["name"].replace("-", " ").title()}'
-        for player in sorted_ranking_list[1:(len(sorted_ranking_list)-1)]:
-            player_name = player["name"].replace("-", " ").title()
-            speech_output+=f', {player_name} \r\n'
-        
-        if len(sorted_ranking_list)>1:
-            speech_output+=f'y {sorted_ranking_list[len(sorted_ranking_list)-1]["name"].replace("-", " ").title()} \r\n'
+        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
+
+        speech_output = play_top_ranking(language_prompts, number)
+
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
         return(
@@ -116,16 +115,9 @@ class PlayPlayerByPositionHandler(AbstractRequestHandler):
     def handle(self,handler_input):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
-        number = int(handler_input.request_envelope.request.intent.slots["number"].slot_value.value)
-        ranking_list = ast.literal_eval(json.loads(http('/prod/players/ranking/{}'.format(number))))
-        speech_output = language_prompts["TOP_PLAYER"][len(ranking_list)-1].format(number)
+        number = handler_input.request_envelope.request.intent.slots["number"].slot_value.value
 
-        for player in ranking_list:
-            speech_output+=player["name"].replace("-", " ").title()
-            speech_output += ' y ' if (len(ranking_list)>1) and (player == ranking_list[0]) else ""
-        
-        if len(ranking_list) == 0:
-            speech_output = random.choice(language_prompts["DRAW"]).format(number, number-1)
+        speech_output = play_player_by_position(language_prompts, number)
 
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
@@ -145,14 +137,71 @@ class PlayPlayerByNameHandler(AbstractRequestHandler):
         language_prompts = handler_input.attributes_manager.request_attributes["_"]
         skill_name = language_prompts["SKILL_NAME"]
         name = handler_input.request_envelope.request.intent.slots["name"].slot_value.value
-        name_formatted = name.lower().replace(" ", "-")
-        player_list = ast.literal_eval(json.loads(http('/prod/players/name/{}'.format(name_formatted))))
 
-        if len(player_list) == 0:
-            speech_output = random.choice(language_prompts["PLAYER_NO_EXIST"]).format(name)
-        else:
-            player_data = player_list[0]
-            speech_output = random.choice(language_prompts["PLAYER_EXIST"]).format(name, data["position"], data["score"], data[won_matches])
+        speech_output = play_player_by_name(language_prompts, name)
+
+        reprompt = random.choice(language_prompts["ASK_MORE"])
+        
+        return(
+            handler_input.response_builder
+                .speak(speech_output+reprompt)
+                .ask(reprompt)
+                .set_card(SimpleCard(skill_name,speech_output))
+                .response
+            )
+
+class PlayPlayerPartnerHandler(AbstractRequestHandler):
+    def can_handle(self, handler_input):
+        return is_intent_name("PlayPlayerPartner")(handler_input)
+    
+    def handle(self,handler_input):
+        language_prompts = handler_input.attributes_manager.request_attributes["_"]
+        skill_name = language_prompts["SKILL_NAME"]
+        name = handler_input.request_envelope.request.intent.slots["name"].slot_value.value
+
+        speech_output = play_player_partner(language_prompts, name)
+
+        reprompt = random.choice(language_prompts["ASK_MORE"])
+        
+        return(
+            handler_input.response_builder
+                .speak(speech_output+reprompt)
+                .ask(reprompt)
+                .set_card(SimpleCard(skill_name,speech_output))
+                .response
+            )
+
+class PlayPlayerSideHandler(AbstractRequestHandler):
+    def can_handle(self, handler_input):
+        return is_intent_name("PlayPlayerSide")(handler_input)
+    
+    def handle(self,handler_input):
+        language_prompts = handler_input.attributes_manager.request_attributes["_"]
+        skill_name = language_prompts["SKILL_NAME"]
+        name = handler_input.request_envelope.request.intent.slots["name"].slot_value.value
+
+        speech_output = play_player_side(language_prompts, name)
+
+        reprompt = random.choice(language_prompts["ASK_MORE"])
+        
+        return(
+            handler_input.response_builder
+                .speak(speech_output+reprompt)
+                .ask(reprompt)
+                .set_card(SimpleCard(skill_name,speech_output))
+                .response
+            )
+
+class PlayPlayerDataHandler(AbstractRequestHandler):
+    def can_handle(self, handler_input):
+        return is_intent_name("PlayPlayerData")(handler_input)
+    
+    def handle(self,handler_input):
+        language_prompts = handler_input.attributes_manager.request_attributes["_"]
+        skill_name = language_prompts["SKILL_NAME"]
+        name = handler_input.request_envelope.request.intent.slots["name"].slot_value.value
+
+        speech_output = play_player_data(language_prompts, name)
 
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
@@ -336,6 +385,10 @@ sb.add_request_handler(LaunchRequestHandler())
 sb.add_request_handler(PlayRankingHandler())
 sb.add_request_handler(PlayTopRankingHandler())
 sb.add_request_handler(PlayPlayerByPositionHandler())
+sb.add_request_handler(PlayPlayerByNameHandler())
+sb.add_request_handler(PlayPlayerPartnerHandler())
+sb.add_request_handler(PlayPlayerSideHandler())
+sb.add_request_handler(PlayPlayerDataHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(RepeatIntentHandler())

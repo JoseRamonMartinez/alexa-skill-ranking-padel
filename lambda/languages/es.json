@@ -30,12 +30,16 @@
       "El jugador {} no existe o no es el nombre exacto con apellidos"
     ],
     "PLAYER_EXIST": [
-      "El jugador {} es el top {} del mundo con {} puntos a sus {} años. Juega en el lado {} junto a {}"
+      "El jugador {} es el top {} del mundo con {} puntos a sus {} años. Juega en el lado del {} junto a {}"
     ],
-    "SAY": [
-      "dice",
-      "comenta",
-      "twitea"
+    "PLAYER_PARTNER":[
+      "La pareja de {} es {}"
+    ],
+    "PLAYER_SIDE":[
+      "{} juega en el lado del {}"
+    ],
+    "PLAYER_DATA":[
+      "{} es el top {} del mundo con {} puntos. Juega en el lado del {} junto a {}. Nació el {} en {}. Actualmente mide {} y reside en {}"
     ],
     "REPEAT": [
       "He dicho... {}"
@@ -44,7 +48,7 @@
       "{}"
     ],
     "HELP": [
-    "Prueba a pedirme las tendencias de un país específico. Por ejemplo, cuáles son las tendencias de españa. También, puedes probar a pedirme los últimos twits relevantes sobre un tema concreto. Por ejemplo, tendencias sobre messi."
+    "Prueba consultar una posición del ranking. También, puedes probar a pedirme información sobre un jugador en concreto. Por ejemplo, quién es el número uno."
     ],
     "HELP_REPROMPT": [
       "¿Con qué puedo ayudarte?"
