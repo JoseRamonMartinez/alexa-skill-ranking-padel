@@ -11,7 +11,7 @@ def play_ranking(language_prompts):
     speech_output = random.choice(language_prompts["RANKING"])
 
     speech_output+=sorted_ranking_list[0]["name"].replace("-", " ").title() + ', '
-    speech_output+=sorted_ranking_list[1]["name"].replace("-", " ").title() + ' y '
+    speech_output+=sorted_ranking_list[1]["name"].replace("-", " ").title() + random.choice(language_prompts["CONNECTOR"])
     speech_output+=sorted_ranking_list[2]["name"].replace("-", " ").title()
 
     return speech_output
