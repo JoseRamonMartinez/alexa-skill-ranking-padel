@@ -57,7 +57,7 @@
         "You have just executed {}. You are hearing this response because the intent called: {}}s doesn't have a intent handler yet."
       ],
       "FALLBACK": [
-        "Hmm, I'm not sure. Try asking me for country-specific trends or twitts on a topic. If you find yourself at a loss, say help or close this skill by saying goodbye."
+        "Hmm, I'm not sure. Try asking me who is top one or how is the ranking. If you find yourself at a loss, say help or close this skill by saying goodbye."
        ],
       "FALLBACK_REPROMPT": [
         "I didn't get it, what can I help you with?"
