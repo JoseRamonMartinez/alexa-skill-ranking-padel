@@ -15,6 +15,6 @@ def play_top_ranking(language_prompts, number_input):
         speech_output+=f', {player_name} \r\n'
     
     if len(sorted_ranking_list)>1:
-        speech_output+=f'y {sorted_ranking_list[len(sorted_ranking_list)-1]["name"].replace("-", " ").title()} \r\n'
+        speech_output+=f'{random.choice(language_prompts["CONNECTOR"])} {sorted_ranking_list[len(sorted_ranking_list)-1]["name"].replace("-", " ").title()} \r\n'
 
     return speech_output
