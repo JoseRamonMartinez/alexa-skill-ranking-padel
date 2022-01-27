@@ -21,7 +21,7 @@ def play_player_by_name(language_prompts, name):
                                                                                     player_data["data"]["partner"],
                                                                                     player_data["data"]["born_date"],
                                                                                     player_data["data"]["born_place"],
-                                                                                    player_data["data"]["height"],
                                                                                     player_data["data"]["home_place"],
+                                                                                    player_data["data"]["height"],
                                                                                 )
     return speech_output
