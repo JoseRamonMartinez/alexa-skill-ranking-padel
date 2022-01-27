@@ -139,7 +139,7 @@ class PlayPlayerByNameHandler(AbstractRequestHandler):
         skill_name = language_prompts["SKILL_NAME"]
         name = handler_input.request_envelope.request.intent.slots["name"].slot_value.value
 
-        speech_output = play_player_by_name(language_prompts, name)
+        speech_output = "Ey" #play_player_by_name(language_prompts, name)
 
         reprompt = random.choice(language_prompts["ASK_MORE"])
         
