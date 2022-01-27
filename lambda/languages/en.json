@@ -11,6 +11,9 @@
       " What else can I do for you?",
       " Anything else?"
     ],
+    "CONNECTOR":[
+    " and "
+    ],
     "RANKING": [
       "The top 3 in the world are: "
     ],
