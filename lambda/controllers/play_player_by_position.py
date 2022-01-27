@@ -12,7 +12,7 @@ def play_player_by_position(language_prompts, number_input):
 
     for player in ranking_list:
         speech_output+=player["name"].replace("-", " ").title()
-        speech_output += ' y ' if (len(ranking_list)>1) and (player == ranking_list[0]) else ""
+        speech_output += random.choice(language_prompts["CONNECTOR"]) if (len(ranking_list)>1) and (player == ranking_list[0]) else ""
         
     if len(ranking_list) == 0:
         speech_output = random.choice(language_prompts["DRAW"]).format(number, number-1)
