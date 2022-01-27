@@ -14,7 +14,7 @@ def play_player_by_name(language_prompts, name):
         side = language_prompts["SIDE_TRANSLATE"][0] if player_data["data"]["side"] == "Drive" else language_prompts["SIDE_TRANSLATE"][1]
 
         speech_output = random.choice(language_prompts["PLAYER_DATA"]).format(
-                                                                                    name, 
+                                                                                    name.title(),
                                                                                     player_data["position"],
                                                                                     player_data["data"]["score"], 
                                                                                     side,
