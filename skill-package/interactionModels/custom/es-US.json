@@ -1,0 +1,147 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "ranking de padel",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "PlayTopRanking",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "di me los {number} mejores del mundo",
+            "di me los {number} mejores",
+            "di me los {number} mejores del ranking",
+            "di me los {number} primeros del ranking",
+            "dime los {number} mejores del ranking",
+            "los {number} primeros del ranking",
+            "cuales son los {number} mejores",
+            "cuales son los {number} mejores del mundo",
+            "dime los {number} mejores del mundo",
+            "dime los {number} mejores",
+            "dime el ranking {number}",
+            "los {number} mejores",
+            "{number} mejores jugadores",
+            "quienes son los {number} mejores jugadores",
+            "quienes son los {number} mejores del mundo",
+            "quienes son los {number} primeros del ranking",
+            "cuales son los {number} primeros del ranking",
+            "dime los {number} primeros del ranking"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "PlayPlayerByPosition",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "di me quien es el numero {number}",
+            "di me la posicion numero {number} del ranking",
+            "di me el {number} del ranking",
+            "di me la posición {number} del ranking",
+            "dime quien es el numero {number}",
+            "quien es el {number}",
+            "dime la posicion numero {number} del ranking",
+            "quien es la posicion numero {number} del ranking",
+            "quien está en la posión numero {number} del ranking",
+            "quien es el numero {number} del mundo",
+            "quien es el numero {number}",
+            "dime el {number} del ranking",
+            "dime la posición {number} del ranking",
+            "quien está en la posión {number} del ranking",
+            "quien es el top {number}"
+          ]
+        },
+        {
+          "name": "PlayPlayerByName",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "di me algo sobre {name}",
+            "dime algo sobre {name}",
+            "di me quien es {name}",
+            "dime quien es {name}",
+            "dime datos de {name}",
+            "datos de {name}",
+            "dime informacion de {name}",
+            "quien es {name}"
+          ]
+        },
+        {
+          "name": "PlayPlayerPartner",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "di me la pareja de {name}",
+            "cual es la pareja de {name}",
+            "dime la pareja de {name}",
+            "quien es la pareja de {name}"
+          ]
+        },
+        {
+          "name": "PlayPlayerSide",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "di me en que lado juega {name}",
+            "dime en que lado juega {name}",
+            "di me el lado de {name}",
+            "dime el lado de {name}",
+            "en que lado juega {name}",
+            "lado de {name}",
+            "en que posicion juega {name}"
+          ]
+        },
+        {
+          "name": "PlayRanking",
+          "slots": [],
+          "samples": [
+            "di me cual es el ranking",
+            "dime cual es el ranking",
+            "di me el ranking",
+            "dime el ranking",
+            "dime los mejores",
+            "quienes son los mejores",
+            "cual es el ranking"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "14"
+}

@@ -1,0 +1,206 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "paddle ranking",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "PlayTopRanking",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "can you tell me the top {number} of the ranking",
+            "tell the ranking {number} of the world",
+            "give the ranking {number} of the world",
+            "show the {number} best in the ranking",
+            "give me the {number} best in the ranking",
+            "get the top {number} of the ranking",
+            "tell the top {number} of the ranking",
+            "tell the {number} best in the ranking",
+            "get the {number} best in the ranking",
+            "give the {number} best in the ranking",
+            "give the ranking {number} of the ranking",
+            "whos the best {number} in the world",
+            "tell me the {number} best in the ranking",
+            "the top {number} of the ranking",
+            "what are the {number} best",
+            "which are the {number} best in the world",
+            "tell me the {number} best in the world",
+            "tell me the {number} best",
+            "tell me the ranking {number}",
+            "the {number} best",
+            "{number} best players",
+            "who are the {number} best players",
+            "who are the {number} best in the world",
+            "who are the top {number} of the ranking",
+            "which are the top {number} of the ranking",
+            "tell me the top {number} of the ranking"
+          ]
+        },
+        {
+          "name": "PlayPlayerByPosition",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "who is in the {number} of the ranking",
+            "give me the {number} of the world",
+            "show me the {number} of the ranking",
+            "can you tell the {number} of the ranking",
+            "can you tell me the {number} of the world",
+            "can you get me the {number} of the world",
+            "can you give me the {number} of the world",
+            "show the {number} of the world",
+            "can you show me the {number} of the world",
+            "who is in the {number}",
+            "can you show me the {number} position of the ranking",
+            "tell us the {number} of the world",
+            "give me the number {number}",
+            "which one is {number}",
+            "can you tell us the {number} of the world",
+            "show us the {number} of the world",
+            "what is the {number} ranking",
+            "give me the {number} position of the world",
+            "who is {number}",
+            "can you tell me who is the number {number}",
+            "can you tell who is the number {number}",
+            "show me who is the number {number}",
+            "show who is the number {number}",
+            "show the {number} of the ranking",
+            "get the {number} of the world",
+            "can you get the {number} of the ranking",
+            "can you give the {number} of the ranking",
+            "tell the {number} of the world",
+            "can you show me the {number} of the ranking",
+            "get the position {number} of the ranking",
+            "tell the top {number} of the ranking",
+            "tell the {number} of the ranking",
+            "get the {number} of the ranking",
+            "whos number {number} in the world",
+            "give the {number} of the ranking",
+            "tell me who is the number {number}",
+            "who is the {number}",
+            "tell me the position number {number} of the ranking",
+            "who is position number {number} of the ranking",
+            "who is in position number {number} of the ranking",
+            "who is the number {number} of the world",
+            "who is the number {number}",
+            "tell me the {number} of the ranking",
+            "tell me the position {number} of the ranking",
+            "who is in the {number} position of the ranking",
+            "who is the top {number}"
+          ]
+        },
+        {
+          "name": "PlayPlayerByName",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "tell me about {name}",
+            "{name} something",
+            "tell me the {name}",
+            "give me the {name}",
+            "tell me the information about {name}",
+            "can you tell me who is {name}",
+            "tell me whos {name}",
+            "tell who is {name}",
+            "give me who is {name}",
+            "get me who is {name}",
+            "can you show me who is {name}",
+            "can you give me information about {name}",
+            "can you get me information about {name}",
+            "can you tell me information about {name}",
+            "get information about {name}",
+            "tell information about {name}",
+            "can you tell information about {name}",
+            "give me information about {name}",
+            "tell me who is {name}",
+            "tell me {name} data",
+            "{name} data",
+            "tell me information about {name}",
+            "who is {name}"
+          ]
+        },
+        {
+          "name": "PlayPlayerPartner",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "which is the partner of {name}",
+            "tell me the pair of {name}",
+            "who is the partner of {name}"
+          ]
+        },
+        {
+          "name": "PlayRanking",
+          "slots": [],
+          "samples": [
+            "tell the best ones",
+            "get the best ones",
+            "give the best ones",
+            "what is the best",
+            "show the best ones",
+            "whos the best of all",
+            "can you give me the ranking",
+            "show me the best ones",
+            "tell me what the ranking is",
+            "tell me the ranking",
+            "tell me the best ones",
+            "who are the best",
+            "what is the ranking"
+          ]
+        },
+        {
+          "name": "PlayPlayerSide",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "tell me on which side {name} plays",
+            "tell me the side of {name}",
+            "on which side {name} plays"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "7"
+}
