@@ -38,7 +38,6 @@
             "show the {number} best in the ranking",
             "give me the {number} best in the ranking",
             "get the top {number} of the ranking",
-            "tell the top {number} of the ranking",
             "tell the {number} best in the ranking",
             "get the {number} best in the ranking",
             "give the {number} best in the ranking",
@@ -202,5 +201,5 @@
       "types": []
     }
   },
-  "version": "4"
+  "version": "5"
 }
