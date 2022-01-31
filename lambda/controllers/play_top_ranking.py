@@ -1,5 +1,6 @@
 import json
 import ast
+import random
 from api.http import http
 
 def play_top_ranking(language_prompts, number_input):
