@@ -1,7 +1,7 @@
 <h3 align="center">ALEXA SKILL</h3>
 <h1 align="center">PADDLE RANKING<h1>
 <p align="center">
-    <img src="https://github.com/JoseRamonMartinez/alexa-skill-paddle-ranking/blob/master/assets/images/en-US_largeIconUri.png">
+    <img src="https://github.com/JoseRamonMartinez/alexa-skill-ranking-padel/blob/master/skill-package/assets/images/en-US_largeIconUri.png">
 </p>
 
 
