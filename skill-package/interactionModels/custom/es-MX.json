@@ -1,11 +1,14 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "ranking de padel",
+      "invocationName": "ranking de pádel",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
-          "samples": []
+          "samples": [
+            "nada",
+            "no"
+          ]
         },
         {
           "name": "AMAZON.HelpIntent",
@@ -24,23 +27,24 @@
             }
           ],
           "samples": [
+            "dime los {number} mejores jugadores del mundo",
             "di me los {number} mejores del mundo",
             "di me los {number} mejores",
             "di me los {number} mejores del ranking",
             "di me los {number} primeros del ranking",
             "dime los {number} mejores del ranking",
             "los {number} primeros del ranking",
-            "cuales son los {number} mejores",
-            "cuales son los {number} mejores del mundo",
+            "cuáles son los {number} mejores",
+            "cuáles son los {number} mejores del mundo",
             "dime los {number} mejores del mundo",
             "dime los {number} mejores",
             "dime el ranking {number}",
             "los {number} mejores",
             "{number} mejores jugadores",
-            "quienes son los {number} mejores jugadores",
-            "quienes son los {number} mejores del mundo",
-            "quienes son los {number} primeros del ranking",
-            "cuales son los {number} primeros del ranking",
+            "quiénes son los {number} mejores jugadores",
+            "quiénes son los {number} mejores del mundo",
+            "quiénes son los {number} primeros del ranking",
+            "cuáles son los {number} primeros del ranking",
             "dime los {number} primeros del ranking"
           ]
         },
@@ -57,21 +61,21 @@
             }
           ],
           "samples": [
-            "di me quien es el numero {number}",
-            "di me la posicion numero {number} del ranking",
+            "di me quién es el número {number}",
+            "di me la posición número {number} del ranking",
             "di me el {number} del ranking",
             "di me la posición {number} del ranking",
-            "dime quien es el numero {number}",
-            "quien es el {number}",
-            "dime la posicion numero {number} del ranking",
-            "quien es la posicion numero {number} del ranking",
-            "quien está en la posión numero {number} del ranking",
-            "quien es el numero {number} del mundo",
-            "quien es el numero {number}",
+            "dime quién es el número {number}",
+            "quién es el {number}",
+            "dime la posición numero {number} del ranking",
+            "quién es la posición número {number} del ranking",
+            "quién está en la posión número {number} del ranking",
+            "quién es el número {number} del mundo",
+            "quién es el número {number}",
             "dime el {number} del ranking",
             "dime la posición {number} del ranking",
-            "quien está en la posión {number} del ranking",
-            "quien es el top {number}"
+            "quién está en la posión {number} del ranking",
+            "quién es el top {number}"
           ]
         },
         {
@@ -85,12 +89,12 @@
           "samples": [
             "di me algo sobre {name}",
             "dime algo sobre {name}",
-            "di me quien es {name}",
-            "dime quien es {name}",
+            "di me quién es {name}",
+            "dime quién es {name}",
             "dime datos de {name}",
             "datos de {name}",
-            "dime informacion de {name}",
-            "quien es {name}"
+            "dime información de {name}",
+            "quién es {name}"
           ]
         },
         {
@@ -103,9 +107,9 @@
           ],
           "samples": [
             "di me la pareja de {name}",
-            "cual es la pareja de {name}",
+            "cuál es la pareja de {name}",
             "dime la pareja de {name}",
-            "quien es la pareja de {name}"
+            "quién es la pareja de {name}"
           ]
         },
         {
@@ -121,27 +125,30 @@
             "dime en que lado juega {name}",
             "di me el lado de {name}",
             "dime el lado de {name}",
-            "en que lado juega {name}",
+            "en qué lado juega {name}",
             "lado de {name}",
-            "en que posicion juega {name}"
+            "en qué posición juega {name}"
           ]
         },
         {
           "name": "PlayRanking",
           "slots": [],
           "samples": [
-            "di me cual es el ranking",
+            "cual es el ranking",
             "dime cual es el ranking",
+            "di me cual es el ranking",
+            "di me cuál es el ranking",
+            "dime cuál es el ranking",
             "di me el ranking",
             "dime el ranking",
             "dime los mejores",
-            "quienes son los mejores",
-            "cual es el ranking"
+            "quiénes son los mejores",
+            "cuál es el ranking"
           ]
         }
       ],
       "types": []
     }
   },
-  "version": "11"
+  "version": "18"
 }

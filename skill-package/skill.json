@@ -1,338 +1,72 @@
 {
   "manifest": {
-    "publishingInformation": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-west-1:837473300515:function:eb3a69d8-b5b7-4837-bc32-48b2cb4f10a5:Release_0"
+        },
+        "interfaces": [],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:837473300515:function:eb3a69d8-b5b7-4837-bc32-48b2cb4f10a5:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:837473300515:function:eb3a69d8-b5b7-4837-bc32-48b2cb4f10a5:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:837473300515:function:eb3a69d8-b5b7-4837-bc32-48b2cb4f10a5:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "containsAds": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
       "locales": {
         "en-US": {
-          "summary": "Check the current paddle ranking or data of the best players of today",
-          "examplePhrases": [
-            "Alexa, open paddle ranking and tell me the ranking",
-            "Alexa, open paddle ranking and tell me who is number 1",
-            "Alexa, open paddle ranking and tell me who is Alejandro Galan Romo"
-          ],
-          "keywords": [
-            "paddel",
-            "tennis",
-            "tennis",
-            "paddle",
-            "wpt",
-            "worldpadeltour",
-            "world",
-            "padel",
-            "tour",
-            "lebron",
-            "bela",
-            "galan",
-            "sport",
-            "ranking",
-            "top",
-            "best",
-            "player",
-            "Paddle",
-            "Padel",
-            "blade",
-            "sneakers",
-            "track",
-            "ball",
-            "championship",
-            "federation",
-            "spain"
-          ],
-          "name": "Paddle Ranking",
-          "description": "Do you want to know who are the best padel players? With the Padel Ranking skill you can know at any time how the world ranking is. \n\nThis skill allows you to check the current ranking, to know which player is in a specific position in the ranking or to inform you about that player.\n\n[How to use the Skill]\n\n- Open the skill.\n\"Alexa, open padel ranking\".\n\n- Ask her about the padel ranking.\n\"Alexa, what is the ranking\".\n\n- Ask for the best of the ranking.\n\"Alexa, who are the top 5 players\".\n\n- Ask her about the best players in the ranking.\n\"Alexa, who are the top 5 players\".\n\n- Ask her for the player in a specific position in the ranking.\n\"Alexa, who is number 1.\"\n\n- Ask her about a specific player (with first and last name).\n\"Alexa, who is Alejandro Galan Romo?\"\n\n- Ask her which side a player plays on.\n\"Alexa, which side does Alejandro Galán Romo play on?\"\n\n- Ask her about a player\u0027s partner.\n\"Alexa, who is Alejandro Galán Romo\u0027s partner\".\n\nIf you need help at any time, Alexa will help you if you say \"help\".\n\nIf you want to close the skill, say \"bye bye\" to alexa.\n\nAny feedback, comments, critics, problems or recommendations are more than welcome.",
-          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
-          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md",
+          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md"
         },
         "en-CA": {
-          "summary": "Check the current paddle ranking or data of the best players of today",
-          "examplePhrases": [
-            "Alexa, open paddle ranking and tell me the ranking",
-            "Alexa, open paddle ranking and tell me who is number 1",
-            "Alexa, open paddle ranking and tell me who is Alejandro Galan Romo"
-          ],
-          "keywords": [
-            "paddel",
-            "tennis",
-            "tennis",
-            "paddle",
-            "wpt",
-            "worldpadeltour",
-            "world",
-            "padel",
-            "tour",
-            "lebron",
-            "bela",
-            "galan",
-            "sport",
-            "ranking",
-            "top",
-            "best",
-            "player",
-            "Paddle",
-            "Padel",
-            "blade",
-            "sneakers",
-            "track",
-            "ball",
-            "championship",
-            "federation",
-            "spain"
-          ],
-          "name": "Paddle Ranking",
-          "description": "Do you want to know who are the best padel players? With the Padel Ranking skill you can know at any time how the world ranking is. \n\nThis skill allows you to check the current ranking, to know which player is in a specific position in the ranking or to inform you about that player.\n\n[How to use the Skill]\n\n- Open the skill.\n\"Alexa, open padel ranking\".\n\n- Ask her about the padel ranking.\n\"Alexa, what is the ranking\".\n\n- Ask for the best of the ranking.\n\"Alexa, who are the top 5 players\".\n\n- Ask her about the best players in the ranking.\n\"Alexa, who are the top 5 players\".\n\n- Ask her for the player in a specific position in the ranking.\n\"Alexa, who is number 1.\"\n\n- Ask her about a specific player (with first and last name).\n\"Alexa, who is Alejandro Galan Romo?\"\n\n- Ask her which side a player plays on.\n\"Alexa, which side does Alejandro Galán Romo play on?\"\n\n- Ask her about a player\u0027s partner.\n\"Alexa, who is Alejandro Galán Romo\u0027s partner\".\n\nIf you need help at any time, Alexa will help you if you say \"help\".\n\nIf you want to close the skill, say \"bye bye\" to alexa.\n\nAny feedback, comments, critics, problems or recommendations are more than welcome.",
-          "smallIconUri": "file://assets/images/en-CA_smallIconUri.png",
-          "largeIconUri": "file://assets/images/en-CA_largeIconUri.png"
+          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md",
+          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md"
         },
         "en-IN": {
-          "summary": "Check the current paddle ranking or data of the best players of today",
-          "examplePhrases": [
-            "Alexa, open paddle ranking and tell me the ranking",
-            "Alexa, open paddle ranking and tell me who is number 1",
-            "Alexa, open paddle ranking and tell me who is Alejandro Galan Romo"
-          ],
-          "keywords": [
-            "paddel",
-            "tennis",
-            "tennis",
-            "paddle",
-            "wpt",
-            "worldpadeltour",
-            "world",
-            "padel",
-            "tour",
-            "lebron",
-            "bela",
-            "galan",
-            "sport",
-            "ranking",
-            "top",
-            "best",
-            "player",
-            "Paddle",
-            "Padel",
-            "blade",
-            "sneakers",
-            "track",
-            "ball",
-            "championship",
-            "federation",
-            "spain"
-          ],
-          "name": "Paddle Ranking",
-          "description": "Do you want to know who are the best padel players? With the Padel Ranking skill you can know at any time how the world ranking is. \n\nThis skill allows you to check the current ranking, to know which player is in a specific position in the ranking or to inform you about that player.\n\n[How to use the Skill]\n\n- Open the skill.\n\"Alexa, open padel ranking\".\n\n- Ask her about the padel ranking.\n\"Alexa, what is the ranking\".\n\n- Ask for the best of the ranking.\n\"Alexa, who are the top 5 players\".\n\n- Ask her about the best players in the ranking.\n\"Alexa, who are the top 5 players\".\n\n- Ask her for the player in a specific position in the ranking.\n\"Alexa, who is number 1.\"\n\n- Ask her about a specific player (with first and last name).\n\"Alexa, who is Alejandro Galan Romo?\"\n\n- Ask her which side a player plays on.\n\"Alexa, which side does Alejandro Galán Romo play on?\"\n\n- Ask her about a player\u0027s partner.\n\"Alexa, who is Alejandro Galán Romo\u0027s partner\".\n\nIf you need help at any time, Alexa will help you if you say \"help\".\n\nIf you want to close the skill, say \"bye bye\" to alexa.\n\nAny feedback, comments, critics, problems or recommendations are more than welcome.",
-          "smallIconUri": "file://assets/images/en-IN_smallIconUri.png",
-          "largeIconUri": "file://assets/images/en-IN_largeIconUri.png"
+          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md",
+          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md"
         },
         "es-ES": {
-          "summary": "Consulta el ranking de pádel actual o datos los mejores jugadores de la actualidad",
-          "examplePhrases": [
-            "Alexa, abre ranking de padel y dime el ranking",
-            "Alexa, abre ranking de padel y dime quien es el numero 1",
-            "Alexa, abre ranking de padel y dime quien es Alejandro Galan Romo"
-          ],
-          "keywords": [
-            "padel",
-            "wpt",
-            "worldpadeltour",
-            "world",
-            "padel",
-            "tour",
-            "lebrom",
-            "bela",
-            "galan",
-            "deporte",
-            "ranking",
-            "pádel",
-            "top",
-            "mejores",
-            "jugadores",
-            "Padel",
-            "Pádel",
-            "pala",
-            "zapatilla",
-            "pista",
-            "raqueta",
-            "bola",
-            "campeonato",
-            "federación",
-            "española",
-            "de",
-            "padel"
-          ],
-          "name": "Paddle Ranking",
-          "description": "¿Quieres saber quienes son los mejores jugadores de pádel? Con la skill Ranking de Padel puede saber en todo momento como está el ranking mundial. \n\nEstá skill te permite consultar el ranking actual, saber que jugador está en una posición concreta del ranking o informarte sobre ese jugador.\n\n[ Cómo usar la Skill ]\n\n- Abre la skill.\n\"Alexa, open ranking de padel\".\n\n- Preguntale por el ranking de padel.\n\"Alexa, cual es el ranking\".\n\n- Preguntale por los mejores del ranking.\n\"Alexa, quienes son los 5 mejores jugadores\".\n\n- Preguntale por los mejores del ranking.\n\"Alexa, quienes son los 5 mejores jugadores\".\n\n- Preguntale por el jugador en una posición concreta del ranking.\n\"Alexa, quién es el número 1\"\n\n- Preguntale sobre un jugador concreto (con nombre y apellidos).\n\"Alexa, quien es Alejandro Galán Romo\"\n\n- Preguntale en que lado juega un jugador.\n\"Alexa, en que lado juega Alejandro Galán Romo\"\n\n- Preguntale por la pareja de un jugador.\n\"Alexa, quien es la pareja de Alejandro Galán Romo\"\n\nSi necesitas ayuda en algun momento, Alexa te ayudara si dices \"ayuda\".\n\nSi quieres cerrar la skill, dile \"adiós\" a alexa.\n\nCualquier feedback, comentario, crítica, problemas o recomendaciones son más que bienvenidas",
-          "smallIconUri": "file://assets/images/es-ES_smallIconUri.png",
-          "largeIconUri": "file://assets/images/es-ES_largeIconUri.png"
+          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md",
+          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md"
         },
         "es-US": {
-          "summary": "Consulta el ranking de pádel actual o datos los mejores jugadores de la actualidad",
-          "examplePhrases": [
-            "Alexa, abre ranking de padel y dime el ranking",
-            "Alexa, abre ranking de padel y dime quien es el numero 1",
-            "Alexa, abre ranking de padel y dime quien es Alejandro Galan Romo"
-          ],
-          "keywords": [
-            "padel",
-            "wpt",
-            "worldpadeltour",
-            "world",
-            "padel",
-            "tour",
-            "lebrom",
-            "bela",
-            "galan",
-            "deporte",
-            "ranking",
-            "pádel",
-            "top",
-            "mejores",
-            "jugadores",
-            "Padel",
-            "Pádel",
-            "pala",
-            "zapatilla",
-            "pista",
-            "raqueta",
-            "bola",
-            "campeonato",
-            "federación",
-            "española",
-            "de",
-            "padel"
-          ],
-          "name": "Paddle Ranking",
-          "description": "¿Quieres saber quienes son los mejores jugadores de pádel? Con la skill Ranking de Padel puede saber en todo momento como está el ranking mundial. \n\nEstá skill te permite consultar el ranking actual, saber que jugador está en una posición concreta del ranking o informarte sobre ese jugador.\n\n[ Cómo usar la Skill ]\n\n- Abre la skill.\n\"Alexa, open ranking de padel\".\n\n- Preguntale por el ranking de padel.\n\"Alexa, cual es el ranking\".\n\n- Preguntale por los mejores del ranking.\n\"Alexa, quienes son los 5 mejores jugadores\".\n\n- Preguntale por los mejores del ranking.\n\"Alexa, quienes son los 5 mejores jugadores\".\n\n- Preguntale por el jugador en una posición concreta del ranking.\n\"Alexa, quién es el número 1\"\n\n- Preguntale sobre un jugador concreto (con nombre y apellidos).\n\"Alexa, quien es Alejandro Galán Romo\"\n\n- Preguntale en que lado juega un jugador.\n\"Alexa, en que lado juega Alejandro Galán Romo\"\n\n- Preguntale por la pareja de un jugador.\n\"Alexa, quien es la pareja de Alejandro Galán Romo\"\n\nSi necesitas ayuda en algun momento, Alexa te ayudara si dices \"ayuda\".\n\nSi quieres cerrar la skill, dile \"adiós\" a alexa.\n\nCualquier feedback, comentario, crítica, problemas o recomendaciones son más que bienvenidas",
-          "smallIconUri": "file://assets/images/es-US_smallIconUri.png",
-          "largeIconUri": "file://assets/images/es-US_largeIconUri.png"
+          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md",
+          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md"
         },
         "en-AU": {
-          "summary": "Check the current paddle ranking or data of the best players of today",
-          "examplePhrases": [
-            "Alexa, open paddle ranking and tell me the ranking",
-            "Alexa, open paddle ranking and tell me who is number 1",
-            "Alexa, open paddle ranking and tell me who is Alejandro Galan Romo"
-          ],
-          "keywords": [
-            "paddel",
-            "tennis",
-            "tennis",
-            "paddle",
-            "wpt",
-            "worldpadeltour",
-            "world",
-            "padel",
-            "tour",
-            "lebron",
-            "bela",
-            "galan",
-            "sport",
-            "ranking",
-            "top",
-            "best",
-            "player",
-            "Paddle",
-            "Padel",
-            "blade",
-            "sneakers",
-            "track",
-            "ball",
-            "championship",
-            "federation",
-            "spain"
-          ],
-          "name": "Paddle Ranking",
-          "description": "Do you want to know who are the best padel players? With the Padel Ranking skill you can know at any time how the world ranking is. \n\nThis skill allows you to check the current ranking, to know which player is in a specific position in the ranking or to inform you about that player.\n\n[How to use the Skill]\n\n- Open the skill.\n\"Alexa, open padel ranking\".\n\n- Ask her about the padel ranking.\n\"Alexa, what is the ranking\".\n\n- Ask for the best of the ranking.\n\"Alexa, who are the top 5 players\".\n\n- Ask her about the best players in the ranking.\n\"Alexa, who are the top 5 players\".\n\n- Ask her for the player in a specific position in the ranking.\n\"Alexa, who is number 1.\"\n\n- Ask her about a specific player (with first and last name).\n\"Alexa, who is Alejandro Galan Romo?\"\n\n- Ask her which side a player plays on.\n\"Alexa, which side does Alejandro Galán Romo play on?\"\n\n- Ask her about a player\u0027s partner.\n\"Alexa, who is Alejandro Galán Romo\u0027s partner\".\n\nIf you need help at any time, Alexa will help you if you say \"help\".\n\nIf you want to close the skill, say \"bye bye\" to alexa.\n\nAny feedback, comments, critics, problems or recommendations are more than welcome.",
-          "smallIconUri": "file://assets/images/en-AU_smallIconUri.png",
-          "largeIconUri": "file://assets/images/en-AU_largeIconUri.png"
+          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md",
+          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md"
         },
         "es-MX": {
-          "summary": "Consulta el ranking de pádel actual o datos los mejores jugadores de la actualidad",
-          "examplePhrases": [
-            "Alexa, abre ranking de padel y dime el ranking",
-            "Alexa, abre ranking de padel y dime quien es el numero 1",
-            "Alexa, abre ranking de padel y dime quien es Alejandro Galan Romo"
-          ],
-          "keywords": [
-            "padel",
-            "wpt",
-            "worldpadeltour",
-            "world",
-            "padel",
-            "tour",
-            "lebrom",
-            "bela",
-            "galan",
-            "deporte",
-            "ranking",
-            "pádel",
-            "top",
-            "mejores",
-            "jugadores",
-            "Padel",
-            "Pádel",
-            "pala",
-            "zapatilla",
-            "pista",
-            "raqueta",
-            "bola",
-            "campeonato",
-            "federación",
-            "española",
-            "de",
-            "padel"
-          ],
-          "name": "Paddle Ranking",
-          "description": "¿Quieres saber quienes son los mejores jugadores de pádel? Con la skill Ranking de Padel puede saber en todo momento como está el ranking mundial. \n\nEstá skill te permite consultar el ranking actual, saber que jugador está en una posición concreta del ranking o informarte sobre ese jugador.\n\n[ Cómo usar la Skill ]\n\n- Abre la skill.\n\"Alexa, open ranking de padel\".\n\n- Preguntale por el ranking de padel.\n\"Alexa, cual es el ranking\".\n\n- Preguntale por los mejores del ranking.\n\"Alexa, quienes son los 5 mejores jugadores\".\n\n- Preguntale por los mejores del ranking.\n\"Alexa, quienes son los 5 mejores jugadores\".\n\n- Preguntale por el jugador en una posición concreta del ranking.\n\"Alexa, quién es el número 1\"\n\n- Preguntale sobre un jugador concreto (con nombre y apellidos).\n\"Alexa, quien es Alejandro Galán Romo\"\n\n- Preguntale en que lado juega un jugador.\n\"Alexa, en que lado juega Alejandro Galán Romo\"\n\n- Preguntale por la pareja de un jugador.\n\"Alexa, quien es la pareja de Alejandro Galán Romo\"\n\nSi necesitas ayuda en algun momento, Alexa te ayudara si dices \"ayuda\".\n\nSi quieres cerrar la skill, dile \"adiós\" a alexa.\n\nCualquier feedback, comentario, crítica, problemas o recomendaciones son más que bienvenidas",
-          "smallIconUri": "file://assets/images/es-MX_smallIconUri.png",
-          "largeIconUri": "file://assets/images/es-MX_largeIconUri.png"
+          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md",
+          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md"
         },
         "en-GB": {
-          "summary": "Check the current paddle ranking or data of the best players of today",
-          "examplePhrases": [
-            "Alexa, open paddle ranking and tell me the ranking",
-            "Alexa, open paddle ranking and tell me who is number 1",
-            "Alexa, open paddle ranking and tell me who is Alejandro Galan Romo"
-          ],
-          "keywords": [
-            "paddel",
-            "tennis",
-            "tennis",
-            "paddle",
-            "wpt",
-            "worldpadeltour",
-            "world",
-            "padel",
-            "tour",
-            "lebron",
-            "bela",
-            "galan",
-            "sport",
-            "ranking",
-            "top",
-            "best",
-            "player",
-            "Paddle",
-            "Padel",
-            "blade",
-            "sneakers",
-            "track",
-            "ball",
-            "championship",
-            "federation",
-            "spain"
-          ],
-          "name": "Paddle Ranking",
-          "description": "Do you want to know who are the best padel players? With the Padel Ranking skill you can know at any time how the world ranking is. \n\nThis skill allows you to check the current ranking, to know which player is in a specific position in the ranking or to inform you about that player.\n\n[How to use the Skill]\n\n- Open the skill.\n\"Alexa, open padel ranking\".\n\n- Ask her about the padel ranking.\n\"Alexa, what is the ranking\".\n\n- Ask for the best of the ranking.\n\"Alexa, who are the top 5 players\".\n\n- Ask her about the best players in the ranking.\n\"Alexa, who are the top 5 players\".\n\n- Ask her for the player in a specific position in the ranking.\n\"Alexa, who is number 1.\"\n\n- Ask her about a specific player (with first and last name).\n\"Alexa, who is Alejandro Galan Romo?\"\n\n- Ask her which side a player plays on.\n\"Alexa, which side does Alejandro Galán Romo play on?\"\n\n- Ask her about a player\u0027s partner.\n\"Alexa, who is Alejandro Galán Romo\u0027s partner\".\n\nIf you need help at any time, Alexa will help you if you say \"help\".\n\nIf you want to close the skill, say \"bye bye\" to alexa.\n\nAny feedback, comments, critics, problems or recommendations are more than welcome.",
-          "smallIconUri": "file://assets/images/en-GB_smallIconUri.png",
-          "largeIconUri": "file://assets/images/en-GB_largeIconUri.png"
+          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md",
+          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md"
         }
       },
-      "automaticDistribution": {
-        "isActive": false
-      },
-      "isAvailableWorldwide": false,
-      "testingInstructions": "No special instructions are needed",
-      "category": "SCORE_KEEPING",
-      "distributionMode": "PUBLIC",
+      "usesPersonalInfo": false
+    },
+    "publishingInformation": {
       "automaticClonedLocale": {
         "locales": [
           {
@@ -343,6 +77,10 @@
           }
         ]
       },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "category": "SCORE_KEEPING",
       "distributionCountries": [
         "AF",
         "AX",
@@ -585,73 +323,335 @@
         "YE",
         "ZM",
         "ZW"
-      ]
-    },
-    "apis": {
-      "custom": {
-        "endpoint": {
-          "uri": "arn:aws:lambda:eu-west-1:837473300515:function:eb3a69d8-b5b7-4837-bc32-48b2cb4f10a5:Release_0"
-        },
-        "interfaces": [],
-        "regions": {
-          "EU": {
-            "endpoint": {
-              "uri": "arn:aws:lambda:eu-west-1:837473300515:function:eb3a69d8-b5b7-4837-bc32-48b2cb4f10a5:Release_0"
-            }
-          },
-          "NA": {
-            "endpoint": {
-              "uri": "arn:aws:lambda:us-east-1:837473300515:function:eb3a69d8-b5b7-4837-bc32-48b2cb4f10a5:Release_0"
-            }
-          },
-          "FE": {
-            "endpoint": {
-              "uri": "arn:aws:lambda:us-west-2:837473300515:function:eb3a69d8-b5b7-4837-bc32-48b2cb4f10a5:Release_0"
-            }
-          }
-        }
-      }
-    },
-    "privacyAndCompliance": {
-      "allowsPurchases": false,
+      ],
+      "distributionMode": "PUBLIC",
+      "isAvailableWorldwide": false,
       "locales": {
         "en-US": {
-          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md",
-          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md"
+          "description": "Do you want to know who are the best padel players? With the Padel Ranking skill you can know at any time how the world ranking is. \n\nThis skill allows you to check the current ranking, to know which player is in a specific position in the ranking or to inform you about that player.\n\n** HOW TO USE **\n\n[ Open the Skill ]\n\n\"Alexa, open paddle ranking\".\n\n\n[ With the skill open ]\n\n- Ask her about the padel ranking.\n\"Alexa, tell me the ranking\".\n\n- Ask her about the best players in the ranking.\n\"Alexa, tell me the 5 best players\"\n\n- Ask her for the player in a specific position in the ranking.\n\"Alexa, who is the number 1\"\n\n- Ask her about a specific player (with first and last name).\n\"Alexa, who is Alejandro Galan Romo?\"\n\n- Ask her which side a player plays on.\n\"Alexa, which side does Alejandro Galan Romo play on?\"\n\n- Ask her about a player's partner.\n\"Alexa, who is Alejandro Galan Romo partner\".\n\nIf you need help at any time, Alexa will help you if you say \"help\".\n\nIf you want to close the skill, say \"bye bye\" to alexa.\n\nAny feedback, comments, critics, problems or recommendations are more than welcome.",
+          "examplePhrases": [
+            "Alexa, open paddle ranking and tell me the ranking",
+            "Alexa, open paddle ranking and tell me who is the number 1",
+            "Alexa, open paddle ranking and tell me who is Alejandro Galan Romo"
+          ],
+          "keywords": [
+            "paddel",
+            "tennis",
+            "tennis",
+            "paddle",
+            "wpt",
+            "worldpadeltour",
+            "world",
+            "padel",
+            "tour",
+            "lebron",
+            "bela",
+            "galan",
+            "sport",
+            "ranking",
+            "top",
+            "best",
+            "player",
+            "Paddle",
+            "Padel",
+            "blade",
+            "sneakers",
+            "track",
+            "ball",
+            "championship",
+            "federation",
+            "spain"
+          ],
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/18ce/2687bb7337ae47bd92ac1de2fc882aea/APP_ICON_LARGE?versionId=jiepukDV2VnC18x.wM5Eb23Ig2RcgmdN&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=63ce89cf69b50ac9ec593da51f4adedd727fc6a33fb035348e1fd5309ec99574",
+          "name": "Paddle Ranking",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/22cb/a48c6c87f5c443f2ac4fe06cd5756d09/APP_ICON?versionId=bfEFhQ7nJ87w9U2Ax5kgqAiOAbBGq84d&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86399&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=bdf8c3d0e56519c558ac366bf39bee53e7404d57aef6b14a49a319ed67dae10e",
+          "summary": "Check paddle ranking or information about the top players in the world"
         },
         "en-CA": {
-          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md",
-          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md"
+          "description": "Do you want to know who are the best padel players? With the Padel Ranking skill you can know at any time how the world ranking is. \n\nThis skill allows you to check the current ranking, to know which player is in a specific position in the ranking or to inform you about that player.\n\n** HOW TO USE **\n\n[ Open the Skill ]\n\n\"Alexa, open paddle ranking\".\n\n\n[ With the skill open ]\n\n- Ask her about the padel ranking.\n\"Alexa, tell me the ranking\".\n\n- Ask her about the best players in the ranking.\n\"Alexa, tell me the 5 best players\"\n\n- Ask her for the player in a specific position in the ranking.\n\"Alexa, who is the number 1\"\n\n- Ask her about a specific player (with first and last name).\n\"Alexa, who is Alejandro Galan Romo?\"\n\n- Ask her which side a player plays on.\n\"Alexa, which side does Alejandro Galan Romo play on?\"\n\n- Ask her about a player's partner.\n\"Alexa, who is Alejandro Galan Romo partner\".\n\nIf you need help at any time, Alexa will help you if you say \"help\".\n\nIf you want to close the skill, say \"bye bye\" to alexa.\n\nAny feedback, comments, critics, problems or recommendations are more than welcome.",
+          "examplePhrases": [
+            "Alexa, open paddle ranking and tell me the ranking",
+            "Alexa, open paddle ranking and tell me who is the number 1",
+            "Alexa, open paddle ranking and tell me who is Alejandro Galan Romo"
+          ],
+          "keywords": [
+            "paddel",
+            "tennis",
+            "tennis",
+            "paddle",
+            "wpt",
+            "worldpadeltour",
+            "world",
+            "padel",
+            "tour",
+            "lebron",
+            "bela",
+            "galan",
+            "sport",
+            "ranking",
+            "top",
+            "best",
+            "player",
+            "Paddle",
+            "Padel",
+            "blade",
+            "sneakers",
+            "track",
+            "ball",
+            "championship",
+            "federation",
+            "spain"
+          ],
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/18ce/2687bb7337ae47bd92ac1de2fc882aea/APP_ICON_LARGE?versionId=jiepukDV2VnC18x.wM5Eb23Ig2RcgmdN&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=63ce89cf69b50ac9ec593da51f4adedd727fc6a33fb035348e1fd5309ec99574",
+          "name": "Paddle Ranking",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/22cb/a48c6c87f5c443f2ac4fe06cd5756d09/APP_ICON?versionId=bfEFhQ7nJ87w9U2Ax5kgqAiOAbBGq84d&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=ebf920d4b0a82a97f2c1150d0ff49fb784b32d9cc5102ecf2101f88202ebafdf",
+          "summary": "Check paddle ranking or information about the top players in the world"
         },
         "en-IN": {
-          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md",
-          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md"
+          "description": "Do you want to know who are the best padel players? With the Padel Ranking skill you can know at any time how the world ranking is. \n\nThis skill allows you to check the current ranking, to know which player is in a specific position in the ranking or to inform you about that player.\n\n** HOW TO USE **\n\n[ Open the Skill ]\n\n\"Alexa, open paddle ranking\".\n\n\n[ With the skill open ]\n\n- Ask her about the padel ranking.\n\"Alexa, tell me the ranking\".\n\n- Ask her about the best players in the ranking.\n\"Alexa, tell me the 5 best players\"\n\n- Ask her for the player in a specific position in the ranking.\n\"Alexa, who is the number 1\"\n\n- Ask her about a specific player (with first and last name).\n\"Alexa, who is Alejandro Galan Romo?\"\n\n- Ask her which side a player plays on.\n\"Alexa, which side does Alejandro Galan Romo play on?\"\n\n- Ask her about a player's partner.\n\"Alexa, who is Alejandro Galan Romo partner\".\n\nIf you need help at any time, Alexa will help you if you say \"help\".\n\nIf you want to close the skill, say \"bye bye\" to alexa.\n\nAny feedback, comments, critics, problems or recommendations are more than welcome.",
+          "examplePhrases": [
+            "Alexa, open paddle ranking and tell me the ranking",
+            "Alexa, open paddle ranking and tell me who is the number 1",
+            "Alexa, open paddle ranking and tell me who is Alejandro Galan Romo"
+          ],
+          "keywords": [
+            "paddel",
+            "tennis",
+            "tennis",
+            "paddle",
+            "wpt",
+            "worldpadeltour",
+            "world",
+            "padel",
+            "tour",
+            "lebron",
+            "bela",
+            "galan",
+            "sport",
+            "ranking",
+            "top",
+            "best",
+            "player",
+            "Paddle",
+            "Padel",
+            "blade",
+            "sneakers",
+            "track",
+            "ball",
+            "championship",
+            "federation",
+            "spain"
+          ],
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/18ce/2687bb7337ae47bd92ac1de2fc882aea/APP_ICON_LARGE?versionId=jiepukDV2VnC18x.wM5Eb23Ig2RcgmdN&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=63ce89cf69b50ac9ec593da51f4adedd727fc6a33fb035348e1fd5309ec99574",
+          "name": "Paddle Ranking",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/22cb/a48c6c87f5c443f2ac4fe06cd5756d09/APP_ICON?versionId=bfEFhQ7nJ87w9U2Ax5kgqAiOAbBGq84d&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=ebf920d4b0a82a97f2c1150d0ff49fb784b32d9cc5102ecf2101f88202ebafdf",
+          "summary": "Check paddle ranking or information about the top players in the world"
         },
         "es-ES": {
-          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md",
-          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md"
+          "description": "¿Quiéres saber quiénes son los mejores jugadores de pádel? Con la skill Ranking de Pádel puede saber en todo momento como está el ranking mundial. \n\nEsta skill te permite consultar el ranking actual, saber que jugador está en una posición concreta del ranking o informarte sobre ese jugador.\n\n** Cómo usar la Skill **\n\n[ Abre la skill ]\n\n\"Alexa, abre ranking de pádel\".\n\n\n[ Con la skill abierta ]\n\n- Preguntale por el ranking de pádel.\n\"Alexa, cuál es el ranking\".\n\n- Preguntale por los mejores del ranking.\n\"Alexa, quiénes son los 5 mejores jugadores\".\n\n- Preguntale por el jugador en una posición concreta del ranking.\n\"Alexa, quién es el número 1\"\n\n- Preguntale sobre un jugador concreto (con nombre y apellidos).\n\"Alexa, quién es Alejandro Galán Romo\"\n\n- Preguntale en que lado juega un jugador.\n\"Alexa, en qué lado juega Alejandro Galán Romo\"\n\n- Preguntale por la pareja de un jugador.\n\"Alexa, quién es la pareja de Alejandro Galán Romo\"\n\n\n\nSi necesitas ayuda en algun momento, Alexa te ayudara si dices \"ayuda\".\n\nSi quieres cerrar la skill, dile \"adiós\" a alexa.\n\nCualquier feedback, comentario, crítica, problemas o recomendaciones son más que bienvenidas",
+          "examplePhrases": [
+            "Alexa, abre ranking de pádel y dime el ranking",
+            "Alexa, abre ranking de pádel y dime quién es el número 1",
+            "Alexa, abre ranking de pádel y dime quién es Alejandro Galán Romo"
+          ],
+          "keywords": [
+            "padel",
+            "wpt",
+            "worldpadeltour",
+            "world",
+            "padel",
+            "tour",
+            "lebrom",
+            "bela",
+            "galan",
+            "deporte",
+            "ranking",
+            "pádel",
+            "top",
+            "mejores",
+            "jugadores",
+            "Padel",
+            "Pádel",
+            "pala",
+            "zapatilla",
+            "pista",
+            "raqueta",
+            "bola",
+            "campeonato",
+            "federación",
+            "española",
+            "de",
+            "padel"
+          ],
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/e7f3/18c467cc125444468c7cc3cddee00f50/APP_ICON_LARGE?versionId=k7SlfQIx4Ol4lr1sK7nu6WriQOR.vqJl&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a81cec63a738989c25a0cb84c848d440b2d354b605c87d7611ab92033ee8706c",
+          "name": "Ranking de Pádel",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/f16c/7405b38c946648b5b30acb33e9f23dc8/APP_ICON?versionId=r9gfD2_nGsaZ_PkSd5Ucv4JambE7CyR2&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=962cb258193561fd6e88aaac413ee2ba0c22cf88bdcafa9b6d73941c668e9f17",
+          "summary": "Consulta el ranking de pádel o datos los mejores jugadores de la actualidad"
         },
         "es-US": {
-          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md",
-          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md"
+          "description": "¿Quiéres saber quiénes son los mejores jugadores de pádel? Con la skill Ranking de Pádel puede saber en todo momento como está el ranking mundial. \n\nEsta skill te permite consultar el ranking actual, saber que jugador está en una posición concreta del ranking o informarte sobre ese jugador.\n\n** Cómo usar la Skill **\n\n[ Abre la skill ]\n\n\"Alexa, abre ranking de pádel\".\n\n\n[ Con la skill abierta ]\n\n- Preguntale por el ranking de pádel.\n\"Alexa, cuál es el ranking\".\n\n- Preguntale por los mejores del ranking.\n\"Alexa, quiénes son los 5 mejores jugadores\".\n\n- Preguntale por el jugador en una posición concreta del ranking.\n\"Alexa, quién es el número 1\"\n\n- Preguntale sobre un jugador concreto (con nombre y apellidos).\n\"Alexa, quién es Alejandro Galán Romo\"\n\n- Preguntale en que lado juega un jugador.\n\"Alexa, en qué lado juega Alejandro Galán Romo\"\n\n- Preguntale por la pareja de un jugador.\n\"Alexa, quién es la pareja de Alejandro Galán Romo\"\n\n\n\nSi necesitas ayuda en algun momento, Alexa te ayudara si dices \"ayuda\".\n\nSi quieres cerrar la skill, dile \"adiós\" a alexa.\n\nCualquier feedback, comentario, crítica, problemas o recomendaciones son más que bienvenidas",
+          "examplePhrases": [
+            "Alexa, abre ranking de pádel y dime el ranking",
+            "Alexa, abre ranking de pádel y dime quién es el número 1",
+            "Alexa, abre ranking de pádel y dime quién es Alejandro Galán Romo"
+          ],
+          "keywords": [
+            "padel",
+            "wpt",
+            "worldpadeltour",
+            "world",
+            "padel",
+            "tour",
+            "lebrom",
+            "bela",
+            "galan",
+            "deporte",
+            "ranking",
+            "pádel",
+            "top",
+            "mejores",
+            "jugadores",
+            "Padel",
+            "Pádel",
+            "pala",
+            "zapatilla",
+            "pista",
+            "raqueta",
+            "bola",
+            "campeonato",
+            "federación",
+            "española",
+            "de",
+            "padel"
+          ],
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/e7f3/18c467cc125444468c7cc3cddee00f50/APP_ICON_LARGE?versionId=k7SlfQIx4Ol4lr1sK7nu6WriQOR.vqJl&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a81cec63a738989c25a0cb84c848d440b2d354b605c87d7611ab92033ee8706c",
+          "name": "Ranking de Pádel",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/f16c/7405b38c946648b5b30acb33e9f23dc8/APP_ICON?versionId=r9gfD2_nGsaZ_PkSd5Ucv4JambE7CyR2&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=962cb258193561fd6e88aaac413ee2ba0c22cf88bdcafa9b6d73941c668e9f17",
+          "summary": "Consulta el ranking de pádel o datos los mejores jugadores de la actualidad"
         },
         "en-AU": {
-          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md",
-          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md"
+          "description": "Do you want to know who are the best padel players? With the Padel Ranking skill you can know at any time how the world ranking is. \n\nThis skill allows you to check the current ranking, to know which player is in a specific position in the ranking or to inform you about that player.\n\n** HOW TO USE **\n\n[ Open the Skill ]\n\n\"Alexa, open paddle ranking\".\n\n\n[ With the skill open ]\n\n- Ask her about the padel ranking.\n\"Alexa, tell me the ranking\".\n\n- Ask her about the best players in the ranking.\n\"Alexa, tell me the 5 best players\"\n\n- Ask her for the player in a specific position in the ranking.\n\"Alexa, who is the number 1\"\n\n- Ask her about a specific player (with first and last name).\n\"Alexa, who is Alejandro Galan Romo?\"\n\n- Ask her which side a player plays on.\n\"Alexa, which side does Alejandro Galan Romo play on?\"\n\n- Ask her about a player's partner.\n\"Alexa, who is Alejandro Galan Romo partner\".\n\nIf you need help at any time, Alexa will help you if you say \"help\".\n\nIf you want to close the skill, say \"bye bye\" to alexa.\n\nAny feedback, comments, critics, problems or recommendations are more than welcome.",
+          "examplePhrases": [
+            "Alexa, open paddle ranking and tell me the ranking",
+            "Alexa, open paddle ranking and tell me who is the number 1",
+            "Alexa, open paddle ranking and tell me who is Alejandro Galan Romo"
+          ],
+          "keywords": [
+            "paddel",
+            "tennis",
+            "tennis",
+            "paddle",
+            "wpt",
+            "worldpadeltour",
+            "world",
+            "padel",
+            "tour",
+            "lebron",
+            "bela",
+            "galan",
+            "sport",
+            "ranking",
+            "top",
+            "best",
+            "player",
+            "Paddle",
+            "Padel",
+            "blade",
+            "sneakers",
+            "track",
+            "ball",
+            "championship",
+            "federation",
+            "spain"
+          ],
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/18ce/2687bb7337ae47bd92ac1de2fc882aea/APP_ICON_LARGE?versionId=jiepukDV2VnC18x.wM5Eb23Ig2RcgmdN&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=63ce89cf69b50ac9ec593da51f4adedd727fc6a33fb035348e1fd5309ec99574",
+          "name": "Paddle Ranking",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/22cb/a48c6c87f5c443f2ac4fe06cd5756d09/APP_ICON?versionId=bfEFhQ7nJ87w9U2Ax5kgqAiOAbBGq84d&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=ebf920d4b0a82a97f2c1150d0ff49fb784b32d9cc5102ecf2101f88202ebafdf",
+          "summary": "Check paddle ranking or information about the top players in the world"
         },
         "es-MX": {
-          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md",
-          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md"
+          "description": "¿Quiéres saber quiénes son los mejores jugadores de pádel? Con la skill Ranking de Pádel puede saber en todo momento como está el ranking mundial. \n\nEsta skill te permite consultar el ranking actual, saber que jugador está en una posición concreta del ranking o informarte sobre ese jugador.\n\n** Cómo usar la Skill **\n\n[ Abre la skill ]\n\n\"Alexa, abre ranking de pádel\".\n\n\n[ Con la skill abierta ]\n\n- Preguntale por el ranking de pádel.\n\"Alexa, cuál es el ranking\".\n\n- Preguntale por los mejores del ranking.\n\"Alexa, quiénes son los 5 mejores jugadores\".\n\n- Preguntale por el jugador en una posición concreta del ranking.\n\"Alexa, quién es el número 1\"\n\n- Preguntale sobre un jugador concreto (con nombre y apellidos).\n\"Alexa, quién es Alejandro Galán Romo\"\n\n- Preguntale en que lado juega un jugador.\n\"Alexa, en qué lado juega Alejandro Galán Romo\"\n\n- Preguntale por la pareja de un jugador.\n\"Alexa, quién es la pareja de Alejandro Galán Romo\"\n\n\n\nSi necesitas ayuda en algun momento, Alexa te ayudara si dices \"ayuda\".\n\nSi quieres cerrar la skill, dile \"adiós\" a alexa.\n\nCualquier feedback, comentario, crítica, problemas o recomendaciones son más que bienvenidas",
+          "examplePhrases": [
+            "Alexa, abre ranking de pádel y dime el ranking",
+            "Alexa, abre ranking de pádel y dime quién es el número 1",
+            "Alexa, abre ranking de pádel y dime quién es Alejandro Galán Romo"
+          ],
+          "keywords": [
+            "padel",
+            "wpt",
+            "worldpadeltour",
+            "world",
+            "padel",
+            "tour",
+            "lebrom",
+            "bela",
+            "galan",
+            "deporte",
+            "ranking",
+            "pádel",
+            "top",
+            "mejores",
+            "jugadores",
+            "Padel",
+            "Pádel",
+            "pala",
+            "zapatilla",
+            "pista",
+            "raqueta",
+            "bola",
+            "campeonato",
+            "federación",
+            "española",
+            "de",
+            "padel"
+          ],
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/e7f3/18c467cc125444468c7cc3cddee00f50/APP_ICON_LARGE?versionId=k7SlfQIx4Ol4lr1sK7nu6WriQOR.vqJl&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a81cec63a738989c25a0cb84c848d440b2d354b605c87d7611ab92033ee8706c",
+          "name": "Ranking de Pádel",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/f16c/7405b38c946648b5b30acb33e9f23dc8/APP_ICON?versionId=r9gfD2_nGsaZ_PkSd5Ucv4JambE7CyR2&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=962cb258193561fd6e88aaac413ee2ba0c22cf88bdcafa9b6d73941c668e9f17",
+          "summary": "Consulta el ranking de pádel o datos los mejores jugadores de la actualidad"
         },
         "en-GB": {
-          "termsOfUseUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/terms-of-service/readme.md",
-          "privacyPolicyUrl": "https://github.com/JoseRamonMartinez/PrivacyPolicy/blob/main/ranking-padel/privacy-policy/readme.md"
+          "description": "Do you want to know who are the best padel players? With the Padel Ranking skill you can know at any time how the world ranking is. \n\nThis skill allows you to check the current ranking, to know which player is in a specific position in the ranking or to inform you about that player.\n\n** HOW TO USE **\n\n[ Open the Skill ]\n\n\"Alexa, open paddle ranking\".\n\n\n[ With the skill open ]\n\n- Ask her about the padel ranking.\n\"Alexa, tell me the ranking\".\n\n- Ask her about the best players in the ranking.\n\"Alexa, tell me the 5 best players\"\n\n- Ask her for the player in a specific position in the ranking.\n\"Alexa, who is the number 1\"\n\n- Ask her about a specific player (with first and last name).\n\"Alexa, who is Alejandro Galan Romo?\"\n\n- Ask her which side a player plays on.\n\"Alexa, which side does Alejandro Galan Romo play on?\"\n\n- Ask her about a player's partner.\n\"Alexa, who is Alejandro Galan Romo partner\".\n\nIf you need help at any time, Alexa will help you if you say \"help\".\n\nIf you want to close the skill, say \"bye bye\" to alexa.\n\nAny feedback, comments, critics, problems or recommendations are more than welcome.",
+          "examplePhrases": [
+            "Alexa, open paddle ranking and tell me the ranking",
+            "Alexa, open paddle ranking and tell me who is the number 1",
+            "Alexa, open paddle ranking and tell me who is Alejandro Galan Romo"
+          ],
+          "keywords": [
+            "paddel",
+            "tennis",
+            "tennis",
+            "paddle",
+            "wpt",
+            "worldpadeltour",
+            "world",
+            "padel",
+            "tour",
+            "lebron",
+            "bela",
+            "galan",
+            "sport",
+            "ranking",
+            "top",
+            "best",
+            "player",
+            "Paddle",
+            "Padel",
+            "blade",
+            "sneakers",
+            "track",
+            "ball",
+            "championship",
+            "federation",
+            "spain"
+          ],
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/18ce/2687bb7337ae47bd92ac1de2fc882aea/APP_ICON_LARGE?versionId=jiepukDV2VnC18x.wM5Eb23Ig2RcgmdN&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=63ce89cf69b50ac9ec593da51f4adedd727fc6a33fb035348e1fd5309ec99574",
+          "name": "Paddle Ranking",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/22cb/a48c6c87f5c443f2ac4fe06cd5756d09/APP_ICON?versionId=bfEFhQ7nJ87w9U2Ax5kgqAiOAbBGq84d&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220206T184414Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QPV37D3RK%2F20220206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=ebf920d4b0a82a97f2c1150d0ff49fb784b32d9cc5102ecf2101f88202ebafdf",
+          "summary": "Check paddle ranking or information about the top players in the world"
         }
       },
-      "containsAds": false,
-      "isExportCompliant": true,
-      "isChildDirected": false,
-      "usesPersonalInfo": false
+      "testingInstructions": "No special instructions are needed"
     }
   }
 }

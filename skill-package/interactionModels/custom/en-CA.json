@@ -5,7 +5,9 @@
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
-          "samples": []
+          "samples": [
+            "no"
+          ]
         },
         {
           "name": "AMAZON.HelpIntent",
@@ -32,13 +34,16 @@
             }
           ],
           "samples": [
+            " tell me the best {number} players",
+            "tell me the top {number} players",
+            "tell me the {number} best players",
+            "who are the top {number} players",
             "can you tell me the top {number} of the ranking",
             "tell the ranking {number} of the world",
             "give the ranking {number} of the world",
             "show the {number} best in the ranking",
             "give me the {number} best in the ranking",
             "get the top {number} of the ranking",
-            "tell the top {number} of the ranking",
             "tell the {number} best in the ranking",
             "get the {number} best in the ranking",
             "give the {number} best in the ranking",
@@ -160,6 +165,7 @@
             }
           ],
           "samples": [
+            "who is {name} partner",
             "which is the partner of {name}",
             "tell me the pair of {name}",
             "who is the partner of {name}"
@@ -193,6 +199,7 @@
             }
           ],
           "samples": [
+            "which side does {name} play on",
             "tell me on which side {name} plays",
             "tell me the side of {name}",
             "on which side {name} plays"
@@ -202,5 +209,5 @@
       "types": []
     }
   },
-  "version": "7"
+  "version": "15"
 }
