@@ -8,7 +8,7 @@
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 
-**[Can be activated from the Amazon Store 🚀](https://www.amazon.es/Jose-Ramon-Martinez-Riveiro-Tendencias/dp/B09FQXY379/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=tendencias+de+actualidad&qid=1631447002&s=digital-skills&sr=1-1)**
+**[Can be activated from the Amazon Store 🚀](https://www.amazon.es/Jose-Ramon-Martinez-Riveiro-Ranking/dp/B09S6TYPX7/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3KTJ3Q76NC557&keywords=padel&qid=1644666866&s=digital-skills&sprefix=padel%2Calexa-skills%2C86&sr=1-1)**
 
 ## Description 📢
 
